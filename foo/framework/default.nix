@@ -19,13 +19,6 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
-
-    nixPath =
-      [
-        "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-        "nixos-config=/persist/etc/nixos/configuration.nix"
-        "/nix/var/nix/profiles/per-user/root/channels"
-      ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -69,27 +62,15 @@
         alacritty
         arandr
         bazel_6
-        direnv
-        discord
         erofs-utils
-        firefox
-        fzf
         gcc
-        git
-        go_1_18
-        google-chrome
-        htop
         (pkgs.callPackage ./kakoune.nix {})
-        kazam
         pamixer
         psmisc
         ripgrep
         shadow
-        vlc
-        weechat
         xsel
         xxd
-        zoom-us
       ];
 
     etc."NetworkManager/system-connections" = {
@@ -137,8 +118,10 @@
 
   services.openssh = {
     enable = true;
-    permitRootLogin = "no";
-    passwordAuthentication = false;
+    settings = {
+      PermitRootLogin = "no";
+      PasswordAuthentication = false;
+    };
     hostKeys =
       [
         {
@@ -191,23 +174,22 @@
         isNormalUser = true;
         createHome = true;
         initialHashedPassword = "\$6\$RFQgR6OLNzEzzTMa\$gdYpa.d1hJhBK7awTnQA9.lb2nlVmzFyH8BxBlSd6o69IuAWBtzuF3irWJcfKuU/GGsJMjr0hBMDOVHOBwap7/";
-	extraGroups =
-	  [
+      	extraGroups = [
     	    "wheel"
     	    "networkmanager"
     	    "docker"
-	  ];
-	group = "users";
-	uid = 1000;
-	home = "/home/hinshun";
-	shell = pkgs.zsh;
+    	  ];
+      	group = "users";
+      	uid = 1000;
+      	home = "/home/hinshun";
+      	shell = pkgs.zsh;
 
-	subUidRanges = [
-	  { startUid = 100000; count = 65536; }
-	];
-	subGidRanges = [
-	  { startGid = 100000; count = 65536; }
-	];
+      	subUidRanges = [
+      	  { startUid = 100000; count = 65536; }
+      	];
+      	subGidRanges = [
+      	  { startGid = 100000; count = 65536; }
+      	];
       };
     };
   };
