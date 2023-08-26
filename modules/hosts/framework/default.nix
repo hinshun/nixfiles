@@ -1,7 +1,15 @@
-{ config, pkgs, lib, ... }:
-
+{ pkgs, lib, nixosModules, ... }:
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    nixosModules.nix-snapshotter
+  ];
+
+  services.nix-snapshotter.rootless.enable = true;
+
+  environment.sessionVariables = {
+    CONTAINERD_SNAPSHOTTER = "nix";
+  };
 
   nix = {
     # Configure to use nixbuild.net.
@@ -64,11 +72,13 @@
         bazel_6
         erofs-utils
         gcc
-        (pkgs.callPackage ./kakoune.nix {})
+        nerdctl
         pamixer
+        (pkgs.callPackage ./kakoune.nix {})
         psmisc
         ripgrep
         shadow
+        tree
         xsel
         xxd
       ];

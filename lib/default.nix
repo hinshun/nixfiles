@@ -1,3 +1,0 @@
-{
-  readTree = import ./readTree;
-}

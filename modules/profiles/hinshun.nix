@@ -1,13 +1,6 @@
-{ config, pkgs, ... }:
-
-let
-  parts = {
-    home.programs.firefox = import ../../home/programs/firefox.nix;
-    home.programs.git = import ../../home/programs/git.nix;
-  };
-
-in {
-  imports = with parts.home.programs; [
+{ pkgs, homeModules, ... }:
+{
+  imports = with homeModules; [
     firefox
     git
   ];
@@ -21,14 +14,14 @@ in {
   # environment.
   home.packages = with pkgs; [
     direnv
-    discord
+    # discord
     fzf
     htop
     bat
     kazam
     vlc
     weechat
-    zoom-us
+    # zoom-us
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -57,6 +50,5 @@ in {
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    # EDITOR = "emacs";
   };
 }

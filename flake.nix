@@ -13,32 +13,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-snapshotter = {
+      url = "git+file:/home/hinshun/git/pdtpartners/nix-snapshotter";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
   };
 
-  outputs = inputs@{ flake-parts, nixpkgs, ... }:
-    let
-      lib = nixpkgs.lib // (import ./lib);
-      # parts = lib.readTree { path = ./.; };
-      parts = {
-        foo = {
-          __functor = _: import ./foo;
-          framework = import ./nixos/hosts/framework;
-        };
-        home = {
-          profiles.hinshun = import ./home/profiles/hinshun.nix;
-        };
-      };
-    in flake-parts.lib.mkFlake {
-      inherit inputs;
-      specialArgs = { inherit parts; };
-    } {
+  outputs = inputs@{ flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
-      # imports = with parts; [
-      #   home
-      #   nixos.hosts
-      # ];
-      imports = [
-        parts.foo
-      ];
+      imports = [ ./modules ];
     };
 }
