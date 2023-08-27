@@ -5,32 +5,40 @@ let
     nixosModules
   ;
 
-  hostSystem = { system, module, profile }:
+  hostSystem = { system, module }:
     let
-      pkgs' = withSystem system ({ pkgs', ... }: pkgs');
+      pkgs = withSystem system ({ pkgs, ... }: pkgs);
+
+      nixosBase = {
+        _module.args = {
+          inherit profiles;
+          pkgs = lib.mkForce pkgs;
+        };
+      };
+
+      homeManagerBase = {
+        home-manager = {
+          useGlobalPkgs = true;
+          extraSpecialArgs = {
+            inherit homeModules;
+          };
+        };
+      };
 
     in lib.nixosSystem {
       inherit system;
       specialArgs = { inherit nixosModules; };
       modules = [
-        { _module.args.pkgs = lib.mkForce pkgs'; }
         module
-        nixosModules.home-manager {
-          home-manager = {
-            useGlobalPkgs = true;
-            users.hinshun = profile;
-            extraSpecialArgs = {
-              inherit homeModules;
-            };
-          };
-        }
+        nixosBase
+        nixosModules.home-manager
+        homeManagerBase
       ];
     };
 
   framework = system: hostSystem {
     inherit system;
     module = ./framework;
-    profile = profiles.hinshun;
   };
 
 in {

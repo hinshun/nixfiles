@@ -1,9 +1,15 @@
-{ pkgs, lib, nixosModules, ... }:
+{ pkgs, nixosModules, profiles, ... }:
 {
   imports = [
     ./hardware-configuration.nix
-    nixosModules.nix-snapshotter
-  ];
+  ] ++ (with nixosModules; [
+    eraseDarlings
+    modernNix
+    nixbuild
+    nix-snapshotter
+  ]);
+
+  home-manager.users = { inherit (profiles) hinshun; };
 
   services.nix-snapshotter.rootless.enable = true;
 
@@ -11,49 +17,11 @@
     CONTAINERD_SNAPSHOTTER = "nix";
   };
 
-  nix = {
-    # Configure to use nixbuild.net.
-    distributedBuilds = true;
-    buildMachines = [
-      {
-        hostName = "eu.nixbuild.net";
-        system = "x86_64-linux";
-        maxJobs = 100;
-        supportedFeatures = [ "benchmark" "big-parallel" ];
-      }
-    ];
-
-    # Enable flakes.
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
-
   nixpkgs.config.allowUnfree = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # source: https://grahamc.com/blog/erase-your-darlings
-  boot.initrd.postDeviceCommands = lib.mkAfter ''
-    zfs rollback -r rpool/local/root@blank
-  '';
-
-  # source: https://grahamc.com/blog/nixos-on-zfs
-  boot.kernelParams = [ "elevator=none" ];
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
-  # boot.kernelPatches = [{
-  #   name = "erofs-over-fscache";
-  #   patch = null;
-  #   extraConfig = ''
-  #     FSCACHE m
-  #     CACHEFILES m
-  #     CACHEFILES_ONDEMAND y
-  #     EROFS_FS m
-  #     EROFS_FS_ONDEMAND y
-  #   '';
-  # }];
 
   time.timeZone = "America/Los_Angeles";
   # time.timeZone = "Asia/Hong_Kong";
@@ -82,24 +50,6 @@
         xsel
         xxd
       ];
-
-    etc."NetworkManager/system-connections" = {
-      source = "/persist/etc/NetworkManager/system-connections/";
-    };
-  };
-
-  systemd.tmpfiles.rules = [
-    "L /var/lib/docker - - - - /persist/var/lib/docker"
-  ];
-
-  fileSystems."/var/lib/bluetooth" = {
-    device = "/persist/var/lib/bluetooth";
-    options = [
-      "bind"
-      "noauto"
-      "x-systemd.automount"
-    ];
-    noCheck = true;
   };
 
   programs.zsh.enable = true;
@@ -126,26 +76,6 @@
     autoSnapshot.enable = true;
   };
 
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-    hostKeys =
-      [
-        {
-          path = "/persist/etc/ssh/ssh_host_ed25519_key";
-          type = "ed25519";
-        }
-        {
-          path = "/persist/etc/ssh/ssh_host_rsa_key";
-          type = "rsa";
-          bits = 4096;
-        }
-      ];
-  };
-
   services.xserver = {
     enable = true;
     libinput.enable = true;
@@ -168,10 +98,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-  };
-
-  virtualisation = {
-    docker.enable = true;
   };
 
   users = {
@@ -204,7 +130,7 @@
     };
   };
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override {
       fonts = [
         "FiraCode"

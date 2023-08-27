@@ -7,6 +7,10 @@ let
 
 in {
   flake.nixosModules = inputModules // {
+    eraseDarlings = ./eraseDarlings.nix;
+    erofs = ./erofs.nix;
+    modernNix = ./modernNix.nix;
+    nixbuild = ./nixbuild.nix;
     vmVariant = ./vmVariant.nix;
   };
 }
