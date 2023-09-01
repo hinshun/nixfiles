@@ -1,27 +1,42 @@
 { pkgs, homeModules, ... }:
 {
-  imports = with homeModules; [
-    firefox
-    git
-  ];
+  imports = with homeModules; [];
 
-  home.username = "hinshun";
-  home.homeDirectory = "/home/hinshun";
-  home.stateVersion = "22.11";
+  home = {
+    username = "hinshun";
+    homeDirectory = "/home/hinshun";
+    stateVersion = "22.11";
+  };
+
   programs.home-manager.enable = true;
+
+  programs.firefox = {
+    enable = true;
+    profiles.hinshun = {
+      settings = {
+        "dom.security.https_only_mode" = true;
+      };
+    };
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Edgar Lee";
+    userEmail = "edgarhinshunlee@gmail.com";
+  };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    bat
     direnv
-    # discord
+    discord
     fzf
     htop
-    bat
     kazam
     vlc
     weechat
-    # zoom-us
+    zoom-us
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

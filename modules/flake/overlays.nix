@@ -6,6 +6,7 @@
       overlays = with inputs; [
         nix-snapshotter.overlays.default
       ];
+      config.allowUnfree = true;
     };
   };
 }
