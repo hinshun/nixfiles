@@ -6,16 +6,9 @@
     darlings
     modernNix
     nixbuild
-    # nix-snapshotter
   ]);
 
   home-manager.users = { inherit (profiles) hinshun; };
-
-  # services.nix-snapshotter.rootless.enable = true;
-
-  # environment.sessionVariables = {
-  #   CONTAINERD_SNAPSHOTTER = "nix";
-  # };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
