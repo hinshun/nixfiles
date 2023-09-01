@@ -70,7 +70,7 @@
         "dirtyRev": "2489f391aded26e15b0321ce77400f17d7980272-dirty",
         "dirtyShortRev": "2489f39-dirty",
         "lastModified": 1693590300,
-        "narHash": "sha256-Q10fncGqjH61LPLaF0aFq/gw56cYt22nlRrFv3qcQk0=",
+        "narHash": "sha256-hb2T9Zjq6JFQKKVKAIQHuFbYcJgj2OFDuf1umuwa6/k=",
         "type": "git",
         "url": "file:/home/hinshun/git/pdtpartners/nix-snapshotter"
       },
