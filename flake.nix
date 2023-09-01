@@ -21,8 +21,13 @@
     };
   };
 
-  outputs = inputs@{ flake-parts, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
+  outputs = inputs@{ nixpkgs, flake-parts, ... }:
+    flake-parts.lib.mkFlake {
+      inherit inputs;
+      specialArgs.lib = nixpkgs.lib.extend(final: prev:
+        import ./lib { lib = final; }
+      );
+    } {
       systems = [ "x86_64-linux" ];
       imports = [ ./modules ];
     };

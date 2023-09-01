@@ -1,21 +1,30 @@
 { self, inputs, ... }:
-{
+let
+  inherit (self)
+    homeModules
+  ;
+
+  inherit (inputs.home-manager.lib)
+    homeManagerConfiguration
+  ;
+
+  hinshun = ./hinshun/home.nix;
+
+in {
   _module.args.profiles = {
-    hinshun = ./hinshun.nix;
+    inherit hinshun;
   };
 
-  perSystem = { pkgs, ... }:
-    let
-      hinshun = inputs.home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./hinshun.nix
-        ];
-        extraSpecialArgs = { inherit (self) homeModules; };
-      };
+  # perSystem = { pkgs, ... }:
+  #   let
+  #     hinshun = homeManagerConfiguration {
+  #       inherit pkgs;
+  #       modules = [ hinshun ];
+  #       extraSpecialArgs = { inherit homeModules; };
+  #     };
 
-    in {
-      # legacyPackages.homeConfigurations = { inherit hinshun; };
-      packages.hinshun = hinshun.activationPackage;
-    };
+  #   in {
+  #     # legacyPackages.homeConfigurations = { inherit hinshun; };
+  #     packages.hinshun = hinshun.activationPackage;
+  #   };
 }

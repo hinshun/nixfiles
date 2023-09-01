@@ -1,6 +1,4 @@
+{ lib, ... }:
 {
-  flake.homeModules = {
-    firefox = ./firefox.nix;
-    git = ./git.nix;
-  };
+  flake.homeModules = lib.readModules ./.;
 }

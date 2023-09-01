@@ -3,7 +3,7 @@
   imports = [
     ./hardware-configuration.nix
   ] ++ (with nixosModules; [
-    eraseDarlings
+    darlings
     modernNix
     nixbuild
     nix-snapshotter
