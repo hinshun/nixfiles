@@ -1,8 +1,12 @@
 { lib, inputs, ... }:
 let
-  inputModules = with inputs; {
-    inherit (home-manager.nixosModules) home-manager;
-    # nix-snapshotter = nix-snapshotter.nixosModules.default;
+  inputModules = {
+    inherit (inputs.home-manager.nixosModules)
+      home-manager
+    ;
+    inherit (inputs.nix-snapshotter.nixosModules)
+      nix-snapshotter
+    ;
   };
 
 in {

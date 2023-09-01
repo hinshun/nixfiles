@@ -1,7 +1,9 @@
 { lib, inputs, ... }:
 let
-  inputModules = with inputs; {
-    nix-snapshotter = nix-snapshotter.homeModules.default;
+  inputModules = {
+    inherit (inputs.nix-snapshotter.homeModules)
+      nix-snapshotter-rootless
+    ;
   };
 
 in {

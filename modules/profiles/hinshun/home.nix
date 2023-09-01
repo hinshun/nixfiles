@@ -1,8 +1,15 @@
-{ pkgs, homeModules, ... }:
-{
+{ config, pkgs, homeModules, ... }:
+let
+  containerd = {
+    inherit (config.virtualisation.containerd.rootless)
+      nsenter
+    ;
+  };
+
+in {
   imports = with homeModules; [
     basicDotfiles
-    # nix-snapshotter
+    nix-snapshotter-rootless
   ];
 
   home = {
@@ -28,6 +35,15 @@
     userEmail = "edgarhinshunlee@gmail.com";
   };
 
+  services.nix-snapshotter.rootless = {
+    enable = true;
+    setContainerdSnapshotter = true;
+  };
+
+  # Perform systemd service updates automatically, will eventually become the
+  # new default.
+  systemd.user.startServices = "sd-switch";
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -37,6 +53,8 @@
     fzf
     htop
     kazam
+    nerdctl
+    containerd.nsenter
     vlc
     weechat
     zoom-us
