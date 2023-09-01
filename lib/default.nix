@@ -11,7 +11,7 @@
           )
           (builtins.readDir path);
 
-      nixosModules =
+      modules =
         lib.mapAttrs'
           (filename: _:
             lib.nameValuePair
@@ -20,5 +20,5 @@
           )
           nixFiles;
 
-    in nixosModules;
+    in modules;
 }

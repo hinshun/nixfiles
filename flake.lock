@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673956053,
+        "narHash": "sha256-4gtG9iQuiKITOjNQQeQIpoIB6b16fm+504Ch3sNKLd8=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "35bb57c0c8d8b62bbfd284272c928ceb64ddbde9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -42,6 +58,7 @@
     },
     "nix-snapshotter": {
       "inputs": {
+        "flake-compat": "flake-compat",
         "flake-parts": [
           "flake-parts"
         ],
@@ -50,11 +67,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1692997796,
-        "narHash": "sha256-RWr6xjOvJEApSTuWV014++Tkc8yvmGYQyCGB6vanEGE=",
-        "ref": "refs/heads/feature/rootless-nixos",
-        "rev": "b16386345e74bbc151148952d10429d5c74ca072",
-        "revCount": 21,
+        "dirtyRev": "8838f1a99e3abce893e36ea410feea35553b8838-dirty",
+        "dirtyShortRev": "8838f1a-dirty",
+        "lastModified": 1693522721,
+        "narHash": "sha256-FDX2j85zPWPCVkb/ACOK1taZjRF9MZ8bSrq72kkW5QM=",
         "type": "git",
         "url": "file:/home/hinshun/git/pdtpartners/nix-snapshotter"
       },

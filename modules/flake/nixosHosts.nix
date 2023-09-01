@@ -1,4 +1,4 @@
-{ self, lib, profiles, config, withSystem, ... }:
+{ self, inputs, lib, profiles, config, withSystem, ... }:
 let
   inherit (self)
     nixosModules
@@ -54,6 +54,7 @@ let
 in {
   options.nixosHosts = mkOption {
     type = types.lazyAttrsOf types.deferredModule;
+    default = { };
   };
 
   config = {

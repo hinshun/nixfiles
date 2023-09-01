@@ -1,12 +1,11 @@
-{ self, inputs, ... }:
 let
-  inherit (self)
-    homeModules
-  ;
+  # inherit (self)
+  #   homeModules
+  # ;
 
-  inherit (inputs.home-manager.lib)
-    homeManagerConfiguration
-  ;
+  # inherit (inputs.home-manager.lib)
+  #   homeManagerConfiguration
+  # ;
 
   hinshun = ./hinshun/home.nix;
 

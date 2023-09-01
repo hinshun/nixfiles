@@ -30,5 +30,6 @@
     } {
       systems = [ "x86_64-linux" ];
       imports = [ ./modules ];
+      debug = true;
     };
 }
