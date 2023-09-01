@@ -7,7 +7,7 @@ let
 
 in {
   flake.nixosModules = lib.mkMerge [
-    (lib.readModules ./.);
+    (lib.readModules ./.)
     inputModules
   ];
 }

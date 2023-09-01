@@ -33,43 +33,25 @@
   environment = {
     pathsToLink = [ "/libexec" ];
 
-    systemPackages = with pkgs;
-      [
-        alacritty
-        arandr
-        bazel_6
-        erofs-utils
-        gcc
-        nerdctl
-        pamixer
-        (pkgs.callPackage ./kakoune.nix {})
-        psmisc
-        ripgrep
-        shadow
-        tree
-        xsel
-        xxd
-      ];
+    systemPackages = with pkgs; [
+      alacritty
+      arandr
+      pamixer
+      (pkgs.callPackage ./kakoune.nix {})
+      psmisc
+      ripgrep
+      shadow
+      tree
+      xsel
+      xxd
+    ];
   };
 
   programs.zsh.enable = true;
+  programs.ssh.startAgent = true;
 
-  programs.ssh = {
-    startAgent = true;
-
-    extraConfig = ''
-      Host eu.nixbuild.net
-        PubkeyAcceptedKeyTypes ssh-ed25519
-        IdentityFile /persist/etc/ssh/ssh_host_ed25519_key
-    '';
-
-    knownHosts = {
-      nixbuild = {
-        hostNames = [ "eu.nixbuild.net" ];
-        publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPIQCZc54poJ8vqawd8TraNryQeJnvH1eLpIDgbiqymM";
-      };
-    };
-  };
+  hardware.bluetooth.enable = true;
+  security.rtkit.enable = true;
 
   services.zfs = {
     autoScrub.enable = true;
@@ -90,9 +72,6 @@
     displayManager.defaultSession = "none+i3";
   };
 
-  hardware.bluetooth.enable = true;
-
-  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
