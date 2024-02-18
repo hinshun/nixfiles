@@ -4,9 +4,6 @@ let
     inherit (inputs.home-manager.nixosModules)
       home-manager
     ;
-    inherit (inputs.nix-snapshotter.nixosModules)
-      nix-snapshotter
-    ;
   };
 
 in {

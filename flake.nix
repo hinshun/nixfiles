@@ -15,7 +15,7 @@
     };
 
     nix-snapshotter = {
-      url = "git+file:/home/hinshun/git/pdtpartners/nix-snapshotter";
+      url = "github:pdtpartners/nix-snapshotter";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
     };
@@ -30,6 +30,5 @@
     } {
       systems = [ "x86_64-linux" ];
       imports = [ ./modules ];
-      debug = true;
     };
 }

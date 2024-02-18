@@ -1,4 +1,4 @@
-{ config, pkgs, homeModules, ... }:
+{ config, pkgs, homeModules, overlays, ... }:
 let
   containerd = {
     inherit (config.virtualisation.containerd.rootless)
@@ -9,7 +9,14 @@ let
 in {
   imports = with homeModules; [
     basicDotfiles
-    nix-snapshotter-rootless
+    direnv
+    gaming
+    helix
+    nix-snapshotter
+    starship
+    wayland
+    # zellij
+    zsh
   ];
 
   home = {
@@ -20,8 +27,13 @@ in {
 
   programs.home-manager.enable = true;
 
+  programs.google-chrome = {
+    enable = true;
+  };
+
   programs.firefox = {
     enable = true;
+    package = pkgs.firefox-wayland;
     profiles.hinshun = {
       settings = {
         "dom.security.https_only_mode" = true;
@@ -35,9 +47,13 @@ in {
     userEmail = "edgarhinshunlee@gmail.com";
   };
 
+  virtualisation.containerd.rootless = {
+    enable = true;
+    nixSnapshotterIntegration = true;
+  };
+
   services.nix-snapshotter.rootless = {
     enable = true;
-    setContainerdSnapshotter = true;
   };
 
   # Perform systemd service updates automatically, will eventually become the
@@ -47,14 +63,18 @@ in {
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    bat
-    direnv
+    asciinema
+    asciinema-agg
+    cargo
+    containerd.nsenter
     discord
-    fzf
-    htop
+    gcc
+    git-lfs
+    go
     kazam
     nerdctl
-    containerd.nsenter
+    obsidian
+    rustc
     vlc
     weechat
     zoom-us

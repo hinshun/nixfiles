@@ -4,6 +4,7 @@
     ./home
     ./hosts
     ./nixos
+    ./palettes
     ./profiles
   ];
 }

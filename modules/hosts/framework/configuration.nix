@@ -5,21 +5,29 @@
   ] ++ (with nixosModules; [
     darlings
     modernNix
-    nixbuild
+    # nixbuild
+    wayland
   ]);
 
   home-manager.users = { inherit (profiles) hinshun; };
+  nix.settings.trusted-users = [ "root" "hinshun" ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  time.timeZone = "America/Los_Angeles";
-  # time.timeZone = "Asia/Hong_Kong";
+  # time.timeZone = "America/New_York";
+  time.timeZone = "Asia/Hong_Kong";
 
-  networking.hostId = "633815e9";
-  networking.hostName = "framework";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostId = "633815e9";
+    hostName = "framework";
+    enableIPv6 = false;
+    networkmanager.enable = true;
+    firewall.allowedUDPPortRanges = [
+      { from = 32768; to = 60999; }
+    ];
+  };
 
   environment = {
     pathsToLink = [ "/libexec" ];
@@ -27,12 +35,17 @@
     systemPackages = with pkgs; [
       alacritty
       arandr
+      bat
+      brightnessctl
+      fzf
+      htop
+      jq
       pamixer
-      (pkgs.callPackage ./kakoune.nix {})
       psmisc
       ripgrep
       shadow
       tree
+      xdg-utils
       xsel
       xxd
     ];
@@ -49,24 +62,32 @@
     autoSnapshot.enable = true;
   };
 
-  services.xserver = {
-    enable = true;
-    libinput.enable = true;
-    xkbOptions = "ctrl:nocaps";
-    windowManager.i3 = {
+  xdg = {
+    autostart.enable = true;
+    portal = {
       enable = true;
-      extraPackages = with pkgs; [
-        rofi
-        polybar
-      ];
     };
-    displayManager.defaultSession = "none+i3";
   };
 
+  # services.xserver = {
+  #   enable = true;
+  #   libinput.enable = true;
+  #   xkbOptions = "ctrl:nocaps";
+  #   windowManager.i3 = {
+  #     enable = true;
+  #     extraPackages = with pkgs; [
+  #       rofi
+  #       polybar
+  #     ];
+  #   };
+  #   displayManager.defaultSession = "none+i3";
+  # };
+
+  hardware.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
-    alsa.support32Bit = true;
+    jack.enable = true;
     pulse.enable = true;
   };
 

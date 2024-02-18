@@ -1,8 +1,16 @@
-{ self, inputs, lib, profiles, config, withSystem, ... }:
+{ self
+, inputs
+, config
+, lib
+, profiles
+, withSystem
+, ...
+}:
 let
   inherit (self)
-    nixosModules
     homeModules
+    nixosModules
+    palettes
   ;
 
   inherit (lib)
@@ -24,7 +32,12 @@ let
       homeManagerBase = {
         home-manager = {
           useGlobalPkgs = true;
-          extraSpecialArgs = { inherit homeModules; };
+          extraSpecialArgs = {
+            inherit
+              homeModules
+              palettes
+            ;
+          };
         };
       };
 
