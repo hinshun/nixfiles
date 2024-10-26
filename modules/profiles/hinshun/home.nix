@@ -1,4 +1,4 @@
-{ config, pkgs, homeModules, overlays, ... }:
+{ config, pkgs, homeModules, ... }:
 let
   containerd = {
     inherit (config.virtualisation.containerd.rootless)
@@ -14,6 +14,7 @@ in {
     helix
     nix-snapshotter
     starship
+    streaming
     wayland
     # zellij
     zsh
@@ -56,6 +57,10 @@ in {
     enable = true;
   };
 
+  services.buildkit.rootless = {
+    enable = true;
+  };
+
   # Perform systemd service updates automatically, will eventually become the
   # new default.
   systemd.user.startServices = "sd-switch";
@@ -71,7 +76,6 @@ in {
     gcc
     git-lfs
     go
-    kazam
     nerdctl
     obsidian
     rustc
@@ -79,6 +83,10 @@ in {
     weechat
     zoom-us
   ];
+
+  # home.shellAliases = {
+  #   nerdctl = "sudo nerdctl";
+  # };
 
   # You can also manage environment variables but you will have to manually
   # source

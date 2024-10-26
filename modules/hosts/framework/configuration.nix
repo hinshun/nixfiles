@@ -5,8 +5,11 @@
   ] ++ (with nixosModules; [
     darlings
     modernNix
-    # nixbuild
+    nixbuild
     wayland
+    # containerd
+    # nix-snapshotter
+    # buildkitd
   ]);
 
   home-manager.users = { inherit (profiles) hinshun; };
@@ -38,6 +41,7 @@
       bat
       brightnessctl
       fzf
+      hlb
       htop
       jq
       pamixer
@@ -61,6 +65,28 @@
     autoScrub.enable = true;
     autoSnapshot.enable = true;
   };
+
+  # security.wrappers = {
+  #   nerdctl = {
+  #     setuid = true;
+  #     owner = "root";
+  #     group = "root";
+  #     source = "${pkgs.nerdctl}/bin/nerdctl";
+  #   };
+  # };
+
+  # virtualisation.containerd = {
+  #   enable = true;
+  #   nixSnapshotterIntegration = true;
+  # };
+
+  # services.nix-snapshotter = {
+  #   enable = true;
+  # };
+
+  # services.buildkitd = {
+  #   enable = true;
+  # };
 
   xdg = {
     autostart.enable = true;
@@ -89,6 +115,7 @@
     alsa.enable = true;
     jack.enable = true;
     pulse.enable = true;
+    wireplumber.enable = true;
   };
 
   users = {
@@ -102,9 +129,11 @@
         createHome = true;
         initialHashedPassword = "\$6\$RFQgR6OLNzEzzTMa\$gdYpa.d1hJhBK7awTnQA9.lb2nlVmzFyH8BxBlSd6o69IuAWBtzuF3irWJcfKuU/GGsJMjr0hBMDOVHOBwap7/";
       	extraGroups = [
-    	    "wheel"
-    	    "networkmanager"
+          "buildkitd"
+          "containerd"
     	    "docker"
+    	    "networkmanager"
+    	    "wheel"
     	  ];
       	group = "users";
       	uid = 1000;

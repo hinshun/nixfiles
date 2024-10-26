@@ -14,25 +14,32 @@
     };
 
     languages = {
-      # language = [
-      #   {
-      #     name = "nix";
-      #     language-servers = [ "nixd" ];
-      #   }
-      # ];
+      language = [
+        # {
+        #   name = "nix";
+        #   language-servers = [ "nixd" ];
+        # }
+        # {
+        #   name = "hlb";
+        #   language-servers = [ "hlb" ];
+        # }
+      ];
 
-      # language-server = {
-      #   nixd.command = "nixd";
-      # };
+      language-server = {
+        # nixd.command = "nixd";
+        hlb.command = "${pkgs.hlb}/bin/hlb langserver";
+      };
 
       language-server = {
         rust-analyzer.config = {
-          inlayHints.bindingModeHints.enable = false;
-          inlayHints.closingBraceHints.minLines = 10;
-          inlayHints.closureReturnTypeHints.enable = "with_block";
-          inlayHints.discriminantHints.enable = "fieldless";
-          inlayHints.lifetimeElisionHints.enable = "skip_trivial";
-          inlayHints.typeHints.hideClosureInitialization = false;
+          inlayHints = {
+            bindingModeHints.enable = false;
+            closingBraceHints.minLines = 10;
+            closureReturnTypeHints.enable = "with_block";
+            discriminantHints.enable = "fieldless";
+            lifetimeElisionHints.enable = "skip_trivial";
+            typeHints.hideClosureInitialization = false;
+          };
         };
       };
     };

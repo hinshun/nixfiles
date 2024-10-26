@@ -51,6 +51,8 @@
       exec-once = [
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
+        "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "${pkgs.xwaylandvideobridge}/bin/xwaylandvideobridge"
       ];
 
       "$mainMod" = "SUPER";

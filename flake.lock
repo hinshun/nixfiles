@@ -67,17 +67,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1708130389,
-        "narHash": "sha256-LzvT0heuCTz7YXUKpog7bqkqkFk1mGG82K+4uUfIpHo=",
-        "owner": "pdtpartners",
-        "repo": "nix-snapshotter",
-        "rev": "bf34e91666d7a3949af4d12bff870a3c23c5e02a",
-        "type": "github"
+        "dirtyRev": "ef8ec3b8bad53935d6230f2a6e0c145b07d874d0-dirty",
+        "dirtyShortRev": "ef8ec3b-dirty",
+        "lastModified": 1729926829,
+        "narHash": "sha256-9LeQCmGqbLn+RxM7eOC6XbJmxmZz4OsdlDFPvmU5di0=",
+        "type": "git",
+        "url": "file:/home/hinshun/git/pdtpartners/nix-snapshotter"
       },
       "original": {
-        "owner": "pdtpartners",
-        "repo": "nix-snapshotter",
-        "type": "github"
+        "type": "git",
+        "url": "file:/home/hinshun/git/pdtpartners/nix-snapshotter"
       }
     },
     "nixpkgs": {

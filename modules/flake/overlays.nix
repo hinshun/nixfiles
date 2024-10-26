@@ -5,6 +5,9 @@
       inherit system;
       overlays = with inputs; [
         nix-snapshotter.overlays.default
+        (self: super: {
+          hlb = self.callPackage ../../packages/hlb {};
+        })
       ];
       config.allowUnfree = true;
     };
