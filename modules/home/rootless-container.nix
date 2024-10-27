@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
+let
+  containerd = {
+    inherit (config.virtualisastion.containerd.rootless)
+      nsenter
+    ;
+  };
 
-{
+in {
   virtualisation.containerd.rootless = {
     enable = true;
     nixSnapshotterIntegration = true;
