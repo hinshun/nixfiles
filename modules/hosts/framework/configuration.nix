@@ -1,7 +1,8 @@
-{ pkgs, nixosModules, profiles, ... }:
+{ pkgs, nixosModules, profiles, config, ... }:
 {
   imports = [
     ./hardware-configuration.nix
+    ./secrets.nix
   ] ++ (with nixosModules; [
     darlings
     modernNix
@@ -13,7 +14,10 @@
   ]);
 
   home-manager.users = { inherit (profiles) hinshun; };
-  nix.settings.trusted-users = [ "root" "hinshun" ];
+  nix.settings = {
+    trusted-users = [ "root" "hinshun" ];
+    access-tokens = [ "github.com=${config.age.secrets.github-token.path}" ];
+  };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -187,4 +191,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
+
+  age.identityPaths = [ "/home/hinshun/.config/sops/age/keys.txt" ];
 }
