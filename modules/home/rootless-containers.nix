@@ -1,27 +1,30 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
+
+with lib;
 
 let
-  containerd = {
-    inherit (config.virtualisation.containerd.rootless)
-      nsenter
-    ;
-  };
-
+  cfg = config.home.containers.rootless;
 in {
-  virtualisation.containerd.rootless = {
-    enable = true;
-    nixSnapshotterIntegration = true;
+  options.home.containers.rootless = {
+    enable = mkEnableOption "rootless container support";
   };
 
-  services.nix-snapshotter.rootless = {
-    enable = true;
-  };
+  config = mkIf cfg.enable {
+    virtualisation.containerd.rootless = {
+      enable = true;
+      nixSnapshotterIntegration = true;
+    };
 
-  services.buildkit.rootless = {
-    enable = true;
-  };
+    services.nix-snapshotter.rootless = {
+      enable = true;
+    };
 
-  home.packages = with pkgs; [
-    containerd.nsenter
-  ];
+    services.buildkit.rootless = {
+      enable = true;
+    };
+
+    home.packages = with pkgs; [
+      config.virtualisation.containerd.rootless.nsenter
+    ];
+  };
 }

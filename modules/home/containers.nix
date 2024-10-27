@@ -4,31 +4,33 @@ with lib;
 
 let
   cfg = config.home.containers;
+in {
+  imports = [
+    ./rootless-containers.nix
+    ./rootful-containers.nix
+  ];
 
-in mkMerge [
-  {
-    options.home.containers = {
-      enable = mkEnableOption "container support";
+  options.home.containers = {
+    enable = mkEnableOption "container support";
 
-      type = mkOption {
-        type = types.enum [ "rootless" "rootful" ];
-        default = "rootless";
-        description = "Whether to use rootless or rootful containers";
-      };
+    type = mkOption {
+      type = types.enum [ "rootless" "rootful" ];
+      default = "rootless";
+      description = "Whether to use rootless or rootful containers";
     };
+  };
 
-    config = mkIf cfg.enable {
+  config = mkIf cfg.enable (mkMerge [
+    {
       home.packages = with pkgs; [
         nerdctl
       ];
-    };
-  }
-  (mkIf cfg.enable (mkMerge [
+    }
     (mkIf (cfg.type == "rootless") {
-      imports = [ ./rootless-containers.nix ];
+      home.containers.rootless.enable = true;
     })
     (mkIf (cfg.type == "rootful") {
-      imports = [ ./rootful-containers.nix ];
+      home.containers.rootful.enable = true;
     })
-  ]))
-]
+  ]);
+}
