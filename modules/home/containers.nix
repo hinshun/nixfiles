@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.modules.containers;
+  cfg = config.home.containers;
 
 in {
-  options.modules.containers = {
+  options.home.containers = {
     enable = mkEnableOption "container support";
 
     type = mkOption {
