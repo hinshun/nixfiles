@@ -25,8 +25,4 @@ in {
     containerd.nsenter
   ];
 
-  # Uncomment if you want to use the alias
-  # home.shellAliases = {
-  #   nerdctl = "sudo nerdctl";
-  # };
 }
