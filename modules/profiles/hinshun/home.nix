@@ -1,14 +1,13 @@
-{ config, pkgs, homeModules, ... }:
-
+{ pkgs, homeModules, ... }:
 {
   imports = with homeModules; [
     aider
     basicDotfiles
+    containers
     direnv
     gaming
     helix
     nix-snapshotter
-    rootless-container
     starship
     streaming
     wayland
@@ -20,6 +19,11 @@
     username = "hinshun";
     homeDirectory = "/home/hinshun";
     stateVersion = "22.11";
+  };
+
+  home.containers = {
+    enable = true;
+    type = "rootless";
   };
 
   programs.home-manager.enable = true;
