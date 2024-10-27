@@ -2,4 +2,5 @@
 result*
 .aider*
 .env
-modules/hosts/framework/github-token.age
+# Ignore all .age encrypted files
+**/*.age
