@@ -1,8 +1,4 @@
 {
-  imports = [
-    ./programs/tofi.nix
-  ];
-
   programs.tofi = {
     enable = true;
     settings = {

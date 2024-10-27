@@ -45,6 +45,7 @@
       htop
       jq
       pamixer
+      pinentry-curses
       psmisc
       ripgrep
       shadow
@@ -64,6 +65,11 @@
   services.zfs = {
     autoScrub.enable = true;
     autoSnapshot.enable = true;
+  };
+
+  services.pcscd.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
   };
 
   # security.wrappers = {

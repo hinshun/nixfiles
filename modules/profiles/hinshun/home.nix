@@ -68,6 +68,7 @@ in {
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    aider-chat
     asciinema
     asciinema-agg
     cargo
@@ -78,11 +79,11 @@ in {
     go
     nerdctl
     obsidian
+    pass
     rustc
     vlc
     weechat
-    zoom-us
-  ];
+    zoom-us  ];
 
   # home.shellAliases = {
   #   nerdctl = "sudo nerdctl";

@@ -15,7 +15,7 @@
     };
 
     nix-snapshotter = {
-      url = "git+file:/home/hinshun/git/pdtpartners/nix-snapshotter";
+      url = "github:pdtpartners/nix-snapshotter?ref=feature/buildkit";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
     };
