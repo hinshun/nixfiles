@@ -13,6 +13,7 @@
       export HCLOUD_TOKEN=$(pass show hetzner/api)
       export ANTHROPIC_API_KEY=$(pass show anthropic/api)
       export OPENROUTER_API_KEY=$(pass show openrouter/api)
+      export OPENAI_API_KEY=$(pass show openai/api)
     '';
   };
 
