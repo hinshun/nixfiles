@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
+
 let
   containerd = {
-    inherit (config.virtualisastion.containerd.rootless)
+    inherit (config.virtualisation.containerd.rootless)
       nsenter
     ;
   };
@@ -21,7 +22,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    nerdctl
     containerd.nsenter
   ];
 }
