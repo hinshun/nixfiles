@@ -8,6 +8,7 @@ let
 
 in {
   imports = with homeModules; [
+    aider
     basicDotfiles
     direnv
     gaming
@@ -68,7 +69,6 @@ in {
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    aider-chat
     asciinema
     asciinema-agg
     cargo
