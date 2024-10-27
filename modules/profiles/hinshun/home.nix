@@ -1,12 +1,6 @@
 { config, pkgs, homeModules, ... }:
-let
-  containerd = {
-    inherit (config.virtualisation.containerd.rootless)
-      nsenter
-    ;
-  };
 
-in {
+{
   imports = with homeModules; [
     aider
     basicDotfiles
@@ -14,6 +8,7 @@ in {
     gaming
     helix
     nix-snapshotter
+    rootless-container
     starship
     streaming
     wayland
@@ -49,19 +44,6 @@ in {
     userEmail = "edgarhinshunlee@gmail.com";
   };
 
-  virtualisation.containerd.rootless = {
-    enable = true;
-    nixSnapshotterIntegration = true;
-  };
-
-  services.nix-snapshotter.rootless = {
-    enable = true;
-  };
-
-  services.buildkit.rootless = {
-    enable = true;
-  };
-
   # Perform systemd service updates automatically, will eventually become the
   # new default.
   systemd.user.startServices = "sd-switch";
@@ -72,20 +54,15 @@ in {
     asciinema
     asciinema-agg
     cargo
-    containerd.nsenter
     discord
     gcc
     git-lfs
     go
-    nerdctl
     obsidian
     pass
     rustc
     vlc
     weechat
-    zoom-us  ];
-
-  # home.shellAliases = {
-  #   nerdctl = "sudo nerdctl";
-  # };
+    zoom-us
+  ];
 }
