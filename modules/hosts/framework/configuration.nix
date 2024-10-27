@@ -4,6 +4,7 @@
     ./hardware-configuration.nix
     ./secrets.nix
   ] ++ (with nixosModules; [
+    agenix
     darlings
     modernNix
     nixbuild
@@ -14,6 +15,7 @@
   ]);
 
   home-manager.users = { inherit (profiles) hinshun; };
+
   nix.settings = {
     trusted-users = [ "root" "hinshun" ];
     access-tokens = [ "github.com=${config.age.secrets.github-token.path}" ];
@@ -23,8 +25,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # time.timeZone = "America/New_York";
-  time.timeZone = "Asia/Hong_Kong";
+  time.timeZone = "America/New_York";
+  # time.timeZone = "Asia/Hong_Kong";
 
   networking = {
     hostId = "633815e9";

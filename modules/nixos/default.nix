@@ -9,6 +9,7 @@ let
       containerd
       buildkitd
     ;
+    agenix = inputs.agenix.nixosModules.default;
   };
 
 in {

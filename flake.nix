@@ -14,6 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    agenix.url = "github:ryantm/agenix";
+
+    # nixos-hardware.url = "github:NixOS/nixos-hardware";
+
     nix-snapshotter = {
       url = "github:pdtpartners/nix-snapshotter?ref=feature/buildkit";
       inputs.nixpkgs.follows = "nixpkgs";

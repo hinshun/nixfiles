@@ -2,5 +2,3 @@
 result*
 .aider*
 .env
-# Ignore all .age encrypted files
-**/*.age
