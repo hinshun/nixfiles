@@ -61,13 +61,17 @@
 
   hardware.bluetooth.enable = true;
   security.rtkit.enable = true;
+  services.fwupd.enable = true;
 
   services.zfs = {
     autoScrub.enable = true;
     autoSnapshot.enable = true;
   };
 
+  services.fstrim.enable = true;
+
   services.pcscd.enable = true;
+  services.fprintd.enable = true;
   programs.gnupg.agent = {
     enable = true;
   };
@@ -116,12 +120,23 @@
   # };
 
   hardware.pulseaudio.enable = false;
+  services.thermald.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     jack.enable = true;
     pulse.enable = true;
     wireplumber.enable = true;
+  };
+
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+    };
   };
 
   users = {
