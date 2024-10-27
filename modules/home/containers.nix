@@ -4,6 +4,7 @@ with lib;
 
 let
   cfg = config.modules.containers;
+
 in {
   options.modules.containers = {
     enable = mkEnableOption "container support";
@@ -19,11 +20,9 @@ in {
     (mkIf (cfg.type == "rootless") {
       imports = [ ./rootless-containers.nix ];
     })
-
     (mkIf (cfg.type == "rootful") {
       imports = [ ./rootful-containers.nix ];
     })
-
     {
       home.packages = with pkgs; [
         nerdctl
