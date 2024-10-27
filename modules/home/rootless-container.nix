@@ -16,6 +16,7 @@
 
   home.packages = with pkgs; [
     nerdctl
+    containerd.nsenter
   ];
 
   # Uncomment if you want to use the alias
