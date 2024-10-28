@@ -1,23 +1,39 @@
 { pkgs, ... }:
 {
   home.sessionVariables = {
-    CLUTTER_BACKEND = "wayland";
-    GDK_BACKEND = "wayland";
 	  GTK_USE_PORTAL = "1";
-	  MOZ_ENABLE_WAYLAND = "1";
 	  NIXOS_OZONE_WL = "1";
+	  MOZ_ENABLE_WAYLAND = "1";
 	  NIXOS_XDG_OPEN_USE_PORTAL = "1";
+	  WLR_RENDERER = "vulkan";
+    GDK_BACKEND = "wayland";
+    CLUTTER_BACKEND = "wayland";
     QT_QPA_PLATFORM = "wayland";
     SDL_VIDEODRIVER = "wayland";
-	  WLR_RENDERER = "vulkan";
+	  XDG_SESSION_TYPE = "wayland";
 	  XDG_CURRENT_DESKTOP = "Hyprland";
 	  XDG_SESSION_DESKTOP = "Hyprland";
-	  XDG_SESSION_TYPE = "wayland";
 	};
 
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+
+    plugins = with pkgs.hyprlandPlugins; [
+      hyprexpo
+    ];
+
+    extraConfig = ''
+      bind = SUPER, R, submap, resize
+      submap = resize
+      binde = , right, resizeactive, 10 0
+      binde = , left, resizeactive, -10 0
+      binde = , up, resizeactive, 0 -10
+      binde = , down, resizeactive, 0 10
+      bind = , escape, submap, reset
+      submap = reset
+    '';
+
     settings = {
       # monitor = [
       #   "eDP-1, 2256x1504, 2256x0, 1"
@@ -52,8 +68,14 @@
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
         "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "${pkgs.xwaylandvideobridge}/bin/xwaylandvideobridge"
+        # TODO: Causes a white floating window, get rid of it.
+        # "${pkgs.xwaylandvideobridge}/bin/xwaylandvideobridge"
       ];
+
+      plugin.hyprexpo = {
+        # Enable laptop touchpad gestures, four finger swipe to toggle.
+        enable_gesture = true;
+      };
 
       "$mainMod" = "SUPER";
       bind = [
@@ -61,6 +83,7 @@
         "$mainMod SHIFT, Q, killactive"
         "$mainMod, D, exec, tofi-drun | xargs hyprctl dispatch exec --"
         "$mainMod, F, fullscreen"
+        "$mainMod, grave, hyprexpo:expo, toggle"
         # Switch window: $mainMod + hjkl
         "$mainMod, h, movefocus, l"
         "$mainMod, j, movefocus, d"

@@ -16,13 +16,19 @@
 
   home-manager.users = { inherit (profiles) hinshun; };
 
+  age.identityPaths = [ "/home/hinshun/.config/sops/age/keys.txt" ];
+
   nix.settings = {
     trusted-users = [ "root" "hinshun" ];
-    access-tokens = [ "github.com=${config.age.secrets.github-token.path}" ];
+    # access-tokens = [ "github.com=${config.age.secrets.github-token.path}" ];
   };
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot = {
+    enable = true;
+    # Limits number of stored generations.
+    configurationLimit = 50;
+  };
   boot.loader.efi.canTouchEfiVariables = true;
 
   time.timeZone = "America/New_York";
@@ -193,6 +199,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
-
-  age.identityPaths = [ "/home/hinshun/.config/sops/age/keys.txt" ];
 }

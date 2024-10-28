@@ -1,5 +1,4 @@
 { self
-, inputs
 , config
 , lib
 , profiles
@@ -33,10 +32,7 @@ let
         home-manager = {
           useGlobalPkgs = true;
           extraSpecialArgs = {
-            inherit
-              homeModules
-              palettes
-            ;
+            inherit homeModules palettes;
           };
         };
       };
