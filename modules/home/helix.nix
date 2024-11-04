@@ -102,6 +102,7 @@
         "ui.virtual.whitespace" = { fg = "dark-fg"; };
         "ui.virtual.ruler" = { bg = "medium-bg"; };
         "ui.virtual.inlay-hint" = { fg = "light-bg"; };
+        "ui.virtual.jump-label" = { fg = "red"; };
 
         "ui.cursor" = { fg = "white"; modifiers = ["reversed"]; };
         "ui.cursor.primary" = { fg = "white"; modifiers = ["reversed"]; };
