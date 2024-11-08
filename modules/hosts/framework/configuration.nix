@@ -5,6 +5,9 @@
     ./agenix.nix
   ] ++ (with nixosModules; [
     darlings
+    disko
+    framework-11th-gen-intel
+    impermanence
     modernNix
     nixbuild
     wayland

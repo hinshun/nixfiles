@@ -2,7 +2,16 @@
   description = "Personal nix configurations";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
@@ -14,24 +23,27 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    agenix = {
-      url = "github:ryantm/agenix";      
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-
-    # Private repository holding *.age secrets.
-    secrets = {
-      url = "github:hinshun/secrets";
-      flake = false;
-    };
-
-    # nixos-hardware.url = "github:NixOS/nixos-hardware";
+    impermanence.url = "github:nix-community/impermanence";
 
     nix-snapshotter = {
       url = "github:pdtpartners/nix-snapshotter?ref=feature/buildkit";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
+    };
+
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    # Private repository holding *.age secrets.
+    secrets = {
+      url = "github:hinshun/secrets";
+      flake = false;
     };
   };
 

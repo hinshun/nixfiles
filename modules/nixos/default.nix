@@ -1,15 +1,12 @@
 { lib, inputs, ... }:
 let
   inputModules = {
-    inherit (inputs.home-manager.nixosModules)
-      home-manager
-    ;
-    inherit (inputs.nix-snapshotter.nixosModules)
-      nix-snapshotter
-      containerd
-      buildkitd
-    ;
     agenix = inputs.agenix.nixosModules.default;
+    inherit (inputs.disko.nixosModules) disko;
+    inherit (inputs.home-manager.nixosModules) home-manager;
+    inherit (inputs.impermanence.nixosModules) impermanence;
+    inherit (inputs.nix-snapshotter.nixosModules) nix-snapshotter;
+    inherit (inputs.nixos-hardware.nixosModules) framework-11th-gen-intel;
   };
 
 in {
