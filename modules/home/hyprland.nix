@@ -20,6 +20,7 @@
     xwayland.enable = true;
 
     plugins = with pkgs.hyprlandPlugins; [
+      # Overview plugin toggled by SUPER+`
       hyprexpo
     ];
 
@@ -35,11 +36,6 @@
     '';
 
     settings = {
-      # monitor = [
-      #   "eDP-1, 2256x1504, 2256x0, 1"
-      #   "DP-1, 3440x1440, 0x0, 1"
-      # ];
-
       general = {
         layout = "dwindle";
         resize_on_border = true;
@@ -84,19 +80,23 @@
         "$mainMod, D, exec, tofi-drun | xargs hyprctl dispatch exec --"
         "$mainMod, F, fullscreen"
         "$mainMod, grave, hyprexpo:expo, toggle"
+
         # Switch window: $mainMod + hjkl
         "$mainMod, h, movefocus, l"
         "$mainMod, j, movefocus, d"
         "$mainMod, k, movefocus, u"
         "$mainMod, l, movefocus, r"
+
         # Move window in direction: $mainMod + SHIFT + hjkl
         "$mainMod SHIFT, h, movewindow, l"
         "$mainMod SHIFT, j, movewindow, d"
         "$mainMod SHIFT, k, movewindow, u"
         "$mainMod SHIFT, l, movewindow, r"
+
         # Move workspace to monitor: $mainMod + ALT + hjkl
         "$mainMod ALT, h, movecurrentworkspacetomonitor, l"
         "$mainMod ALT, l, movecurrentworkspacetomonitor, r"
+
         # Switch workspaces: $mainMod + [0-9]
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
@@ -108,6 +108,7 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+
         # Move window to workspace: $mainMod + SHIFT + [0-9]
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"

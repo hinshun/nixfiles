@@ -2,7 +2,7 @@
 {
   imports = with homeModules; [
     hyprland
-    # hyprpaper
+    kanshi
     tofi
     waybar
   ];
@@ -12,4 +12,7 @@
     slurp
     wl-clipboard
   ];
+
+  # Enable lightweight notification daaemon for Wayland.
+  services.mako.enable = true;
 }
