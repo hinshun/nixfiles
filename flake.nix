@@ -20,6 +20,12 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    # Private repository holding *.age secrets.
+    secrets = {
+      url = "github:hinshun/secrets";
+      flake = false;
+    };
+
     # nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     nix-snapshotter = {

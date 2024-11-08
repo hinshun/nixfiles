@@ -1,10 +1,9 @@
-{ pkgs, nixosModules, profiles, config, ... }:
+{ pkgs, nixosModules, profiles, ... }:
 {
   imports = [
     ./hardware-configuration.nix
-    ./secrets.nix
+    ./agenix.nix
   ] ++ (with nixosModules; [
-    agenix
     darlings
     modernNix
     nixbuild
@@ -16,11 +15,8 @@
 
   home-manager.users = { inherit (profiles) hinshun; };
 
-  age.identityPaths = [ "/home/hinshun/.config/sops/age/keys.txt" ];
-
   nix.settings = {
     trusted-users = [ "root" "hinshun" ];
-    # access-tokens = [ "github.com=${config.age.secrets.github-token.path}" ];
   };
 
   # Use the systemd-boot EFI boot loader.
@@ -49,7 +45,6 @@
 
     systemPackages = with pkgs; [
       alacritty
-      arandr
       bat
       brightnessctl
       fzf

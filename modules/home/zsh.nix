@@ -10,10 +10,10 @@
       cdg = "cd $(find -L ~/git -maxdepth 2 -mindepth 2 | fzf --reverse --height 12)";
     };
     envExtra = ''
-      export HCLOUD_TOKEN=$(pass show hetzner/api)
-      export ANTHROPIC_API_KEY=$(pass show anthropic/api)
-      export OPENROUTER_API_KEY=$(pass show openrouter/api)
-      export OPENAI_API_KEY=$(pass show openai/api)
+      export HCLOUD_TOKEN=$(cat /run/agenix/hetzner-cloud)
+      export ANTHROPIC_API_KEY=$(cat /run/agenix/anthropic-api)
+      export OPENROUTER_API_KEY=$(cat /run/agenix/openrouter-api)
+      export OPENAI_API_KEY=$(cat /run/agenix/openai-api)
     '';
   };
 

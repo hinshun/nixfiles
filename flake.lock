@@ -150,7 +150,24 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "nix-snapshotter": "nix-snapshotter",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "secrets": "secrets"
+      }
+    },
+    "secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731093027,
+        "narHash": "sha256-EOcZypAz/w2zzW4NplJQ+zXTaUNnXJs31ZLi4N9UGE4=",
+        "owner": "hinshun",
+        "repo": "secrets",
+        "rev": "20ea6aa39d10a4f7bd4c93a55f1e995fbc9a7656",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hinshun",
+        "repo": "secrets",
+        "type": "github"
       }
     },
     "systems": {

@@ -1,5 +1,6 @@
 { self
 , config
+, inputs
 , lib
 , profiles
 , withSystem
@@ -39,7 +40,10 @@ let
 
     in lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit nixosModules; };
+      specialArgs = {
+        inherit nixosModules;
+        inherit (inputs) secrets;
+      };
       modules = [
         nixosBase
         nixosModules.home-manager
