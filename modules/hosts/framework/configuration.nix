@@ -7,9 +7,8 @@
     darlings
     disko
     framework-11th-gen-intel
-    impermanence
     modernNix
-    nixbuild
+    # nixbuild
     wayland
     # containerd
     # nix-snapshotter
@@ -21,6 +20,11 @@
   nix.settings = {
     trusted-users = [ "root" "hinshun" ];
   };
+
+  users.groups.plugdev = {};
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="plugdev"
+  '';
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot = {
@@ -51,7 +55,6 @@
       bat
       brightnessctl
       fzf
-      hlb
       htop
       jq
       pamixer
@@ -129,7 +132,7 @@
   #   displayManager.defaultSession = "none+i3";
   # };
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   services.thermald.enable = true;
   services.pipewire = {
     enable = true;
@@ -164,8 +167,9 @@
           "containerd"
     	    "docker"
     	    "networkmanager"
+          "plugdev"
     	    "wheel"
-    	  ];
+        ];
       	group = "users";
       	uid = 1000;
       	home = "/home/hinshun";
@@ -182,12 +186,7 @@
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "DroidSansMono"
-      ];
-    })
+    nerd-fonts.fira-code
   ];
 
   # This value determines the NixOS release from which the default

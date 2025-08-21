@@ -62,7 +62,9 @@
     discord
     gcc
     git-lfs
+    gh
     go
+    nix-output-monitor
     obsidian
     pass
     rustc

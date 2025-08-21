@@ -18,14 +18,19 @@
     "L /var/lib/docker - - - - /persist/var/lib/docker"
   ];
 
-  fileSystems."/var/lib/bluetooth" = {
-    device = "/persist/var/lib/bluetooth";
-    options = [
-      "bind"
-      "noauto"
-      "x-systemd.automount"
-    ];
-    noCheck = true;
+  fileSystems = {
+    "/var/lib/bluetooth" = {
+      device = "/persist/var/lib/bluetooth";
+      options = [
+        "bind"
+        "noauto"
+        "x-systemd.automount"
+      ];
+      noCheck = true;
+    };    
+
+    # Ensure SSH keys are available for agenix to decrypt during stage-2-init.
+    "/persist".neededForBoot = true;
   };
 
   services.openssh = {
@@ -38,11 +43,6 @@
       {
         path = "/persist/etc/ssh/ssh_host_ed25519_key";
         type = "ed25519";
-      }
-      {
-        path = "/persist/etc/ssh/ssh_host_rsa_key";
-        type = "rsa";
-        bits = 4096;
       }
     ];
   };

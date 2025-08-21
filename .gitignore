@@ -3,3 +3,9 @@ result*
 .aider*
 .env
 todo
+
+# agenix
+**/*.age
+
+# facter
+facter.json

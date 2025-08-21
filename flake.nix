@@ -23,7 +23,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    impermanence.url = "github:nix-community/impermanence";
+    nix = {
+      url = "github:NixOS/nix?ref=d904921eecbc17662fef67e8162bd3c7d1a54ce0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
 
     nix-snapshotter = {
       url = "github:pdtpartners/nix-snapshotter?ref=feature/buildkit";
@@ -41,10 +45,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Private repository holding *.age secrets.
-    secrets = {
-      url = "github:hinshun/secrets";
-      flake = false;
-    };
+    secrets.url = "github:hinshun/secrets";
   };
 
   outputs = inputs@{ nixpkgs, flake-parts, ... }:

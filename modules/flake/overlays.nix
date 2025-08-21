@@ -5,10 +5,8 @@
       inherit system;
       overlays = with inputs; [
         agenix.overlays.default
+        nix.overlays.default
         nix-snapshotter.overlays.default
-        (self: super: {
-          hlb = self.callPackage ../../packages/hlb {};
-        })
       ];
       config.allowUnfree = true;
     };

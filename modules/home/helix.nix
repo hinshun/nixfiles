@@ -19,15 +19,10 @@
         #   name = "nix";
         #   language-servers = [ "nixd" ];
         # }
-        # {
-        #   name = "hlb";
-        #   language-servers = [ "hlb" ];
-        # }
       ];
 
       language-server = {
         # nixd.command = "nixd";
-        hlb.command = "${pkgs.hlb}/bin/hlb langserver";
       };
 
       language-server = {
@@ -164,7 +159,7 @@
   home.packages = with pkgs; [
     gopls
     nil
-    nixd
+    # nixd
     python3Packages.python-lsp-server
     rust-analyzer
   ];
