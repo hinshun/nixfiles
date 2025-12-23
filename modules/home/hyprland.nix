@@ -79,7 +79,6 @@
         "$mainMod SHIFT, Q, killactive"
         "$mainMod, D, exec, tofi-drun | xargs hyprctl dispatch exec --"
         "$mainMod, F, fullscreen"
-        "$mainMod, grave, hyprexpo:expo, toggle"
 
         # Switch window: $mainMod + hjkl
         "$mainMod, h, movefocus, l"

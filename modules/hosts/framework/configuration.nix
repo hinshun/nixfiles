@@ -17,8 +17,11 @@
 
   home-manager.users = { inherit (profiles) hinshun; };
 
-  nix.settings = {
-    trusted-users = [ "root" "hinshun" ];
+  nix = {
+    package = pkgs.nixVersions.nix_2_30;
+    settings = {
+      trusted-users = [ "root" "hinshun" ];
+    };
   };
 
   users.groups.plugdev = {};

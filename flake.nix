@@ -23,12 +23,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix = {
-      url = "github:NixOS/nix?ref=d904921eecbc17662fef67e8162bd3c7d1a54ce0";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-    };
-
     nix-snapshotter = {
       url = "github:pdtpartners/nix-snapshotter?ref=feature/buildkit";
       inputs.nixpkgs.follows = "nixpkgs";

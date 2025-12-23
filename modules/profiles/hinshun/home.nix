@@ -1,7 +1,6 @@
 { pkgs, homeModules, ... }:
 {
   imports = with homeModules; [
-    aider
     basicDotfiles
     containers
     direnv
@@ -46,6 +45,10 @@
     enable = true;
     userName = "Edgar Lee";
     userEmail = "edgarhinshunlee@gmail.com";
+  };
+
+  programs.claude-code = {
+    enable = true;
   };
 
   # Perform systemd service updates automatically, will eventually become the
