@@ -1,18 +1,19 @@
 { homeModules, pkgs, ... }:
 {
   imports = with homeModules; [
-    # hyprland
-    kanshi
-    # tofi
-    # waybar
+    # kanshi
+    tofi
+    noctalia
   ];
 
   home.packages = with pkgs; [
     grim
     slurp
     wl-clipboard
+    xwayland-satellite
   ];
 
-  # Enable lightweight notification daaemon for Wayland.
-  # services.mako.enable = true;
+  programs.noctalia-shell = {
+    enable = true;
+  };
 }

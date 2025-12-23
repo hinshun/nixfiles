@@ -124,20 +124,6 @@
     };
   };
 
-  # services.xserver = {
-  #   enable = true;
-  #   libinput.enable = true;
-  #   xkbOptions = "ctrl:nocaps";
-  #   windowManager.i3 = {
-  #     enable = true;
-  #     extraPackages = with pkgs; [
-  #       rofi
-  #       polybar
-  #     ];
-  #   };
-  #   displayManager.defaultSession = "none+i3";
-  # };
-
   services.pulseaudio.enable = false;
   services.thermald.enable = true;
   services.pipewire = {

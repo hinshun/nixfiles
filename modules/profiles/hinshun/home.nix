@@ -6,7 +6,6 @@
     gaming
     helix
     nix-snapshotter
-    noctalia
     starship
     streaming
     wayland
@@ -53,10 +52,6 @@
     enable = true;
     systemd.enable = true;
     enableZshIntegration = true;
-  };
-
-  programs.noctalia-shell = {
-    enable = true;
   };
 
   # Perform systemd service updates automatically, will eventually become the
