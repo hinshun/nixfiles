@@ -92,6 +92,8 @@
     enable = true;
   };
 
+  virtualisation.docker.enable = true;
+
   # security.wrappers = {
   #   nerdctl = {
   #     setuid = true;
