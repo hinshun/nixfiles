@@ -1,7 +1,6 @@
 { pkgs, homeModules, ... }:
 {
   imports = with homeModules; [
-    basicDotfiles
     containers
     direnv
     gaming
@@ -10,7 +9,6 @@
     starship
     streaming
     wayland
-    # zellij
     zsh
   ];
 
@@ -33,7 +31,6 @@
 
   programs.firefox = {
     enable = true;
-    package = pkgs.firefox-wayland;
     profiles.hinshun = {
       settings = {
         "dom.security.https_only_mode" = true;
