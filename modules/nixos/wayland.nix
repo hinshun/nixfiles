@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
-  programs.hyprland = {
-    enable = true;
-  };
+  # programs.hyprland = {
+  #   enable = true;
+  # };
 
   services.greetd = {
     enable = true;
@@ -12,12 +12,12 @@
           --time \
           --asterisks \
           --user-menu \
-          --cmd Hyprland
+          --cmd niri-session
       '';
     };
   };
 
   environment.etc."greetd/environments".text = ''
-    Hyprland
+    Niri
   '';
 }

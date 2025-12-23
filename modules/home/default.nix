@@ -2,6 +2,7 @@
 let
   inputModules = {
     nix-snapshotter = inputs.nix-snapshotter.homeModules.default;
+    noctalia = inputs.noctalia.homeModules.default;
   };
 
 in {

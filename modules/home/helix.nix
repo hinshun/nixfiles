@@ -91,7 +91,7 @@
         "warning" = { fg = "yellow"; modifiers = ["bold"]; };
         "error" = { fg = "red"; modifiers = ["bold"]; };
 
-        "ui.background" = { bg = "dark-bg"; };
+        # "ui.background" = { bg = "dark-bg"; };
         "ui.virtual" = { fg = "medium-bg"; };
         "ui.virtual.indent-guide" = { fg = "medium-bg"; };
         "ui.virtual.whitespace" = { fg = "dark-fg"; };

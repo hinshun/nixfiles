@@ -38,6 +38,11 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Private repository holding *.age secrets.
     secrets.url = "github:hinshun/secrets";
   };

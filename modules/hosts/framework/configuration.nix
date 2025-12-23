@@ -54,7 +54,6 @@
     pathsToLink = [ "/libexec" ];
 
     systemPackages = with pkgs; [
-      alacritty
       bat
       brightnessctl
       fzf
@@ -73,7 +72,7 @@
   };
 
   programs.zsh.enable = true;
-  programs.ssh.startAgent = true;
+  # programs.ssh.startAgent = true;
 
   hardware.bluetooth.enable = true;
   security.rtkit.enable = true;
@@ -91,6 +90,8 @@
   programs.gnupg.agent = {
     enable = true;
   };
+
+  programs.niri.enable = true;
 
   virtualisation.docker.enable = true;
 

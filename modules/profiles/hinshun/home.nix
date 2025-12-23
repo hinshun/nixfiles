@@ -6,6 +6,7 @@
     gaming
     helix
     nix-snapshotter
+    noctalia
     starship
     streaming
     wayland
@@ -48,6 +49,16 @@
     enable = true;
   };
 
+  programs.ghostty = {
+    enable = true;
+    systemd.enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.noctalia-shell = {
+    enable = true;
+  };
+
   # Perform systemd service updates automatically, will eventually become the
   # new default.
   systemd.user.startServices = "sd-switch";
@@ -61,12 +72,13 @@
     cargo
     discord
     gcc
-    git-lfs
     gh
+    git-lfs
     go
     nix-output-monitor
     obsidian
     pass
+    quickshell
     rustc
     vlc
     weechat

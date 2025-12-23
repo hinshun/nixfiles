@@ -1,10 +1,10 @@
 { homeModules, pkgs, ... }:
 {
   imports = with homeModules; [
-    hyprland
+    # hyprland
     kanshi
-    tofi
-    waybar
+    # tofi
+    # waybar
   ];
 
   home.packages = with pkgs; [
@@ -14,5 +14,5 @@
   ];
 
   # Enable lightweight notification daaemon for Wayland.
-  services.mako.enable = true;
+  # services.mako.enable = true;
 }

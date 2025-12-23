@@ -23,20 +23,20 @@
       fsType = "zfs";
     };
 
-  fileSystems."/rpool" =
-    { device = "rpool";
-      fsType = "zfs";
-    };
+  # fileSystems."/rpool" =
+  #   { device = "rpool";
+  #     fsType = "zfs";
+  #   };
 
-  fileSystems."/rpool/local" =
-    { device = "rpool/local";
-      fsType = "zfs";
-    };
+  # fileSystems."/rpool/local" =
+  #   { device = "rpool/local";
+  #     fsType = "zfs";
+  #   };
 
-  fileSystems."/rpool/safe" =
-    { device = "rpool/safe";
-      fsType = "zfs";
-    };
+  # fileSystems."/rpool/safe" =
+  #   { device = "rpool/safe";
+  #     fsType = "zfs";
+  #   };
 
   fileSystems."/home" =
     { device = "rpool/safe/home";
