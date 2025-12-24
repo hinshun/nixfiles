@@ -103,9 +103,9 @@
         "ui.cursor.primary" = { fg = "white"; modifiers = ["reversed"]; };
         "ui.cursor.match" = { fg = "blue"; modifiers = ["underlined"]; };
 
-        "ui.selection" = { bg = "medium-bg"; };
-        "ui.selection.primary" = { bg = "medium-bg"; };
-        "ui.cursorline.primary" = { bg = "medium-bg"; };
+        "ui.selection" = { bg = "light-bg"; };
+        "ui.selection.primary" = { bg = "light-bg"; };
+        "ui.cursorline.primary" = { bg = "light-bg"; };
 
         "ui.highlight" = { bg = "medium-bg"; };
         "ui.highlight.frameline" = { bg = "#97202a"; };

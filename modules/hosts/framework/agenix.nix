@@ -38,6 +38,10 @@ in {
       file = secrets.ageSecrets.hetzner-cloud;
     } // user_readable;
 
+    infracost-api = {
+      file = secrets.ageSecrets.infracost-api;
+    } // user_readable;
+
     openai-api = {
       file = secrets.ageSecrets.openai-api;
     } // user_readable;

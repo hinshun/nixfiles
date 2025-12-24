@@ -45,6 +45,11 @@
 
     # Private repository holding *.age secrets.
     secrets.url = "github:hinshun/secrets";
+
+    terranix = {
+      url = "github:terranix/terranix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, flake-parts, ... }:

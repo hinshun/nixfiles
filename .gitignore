@@ -9,3 +9,7 @@ todo
 
 # facter
 facter.json
+
+# terraform
+.terraform
+.terraform.lock.hcl

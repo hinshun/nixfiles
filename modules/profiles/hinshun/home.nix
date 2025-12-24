@@ -70,8 +70,10 @@
     gh
     git-lfs
     go
+    hcloud
     nix-output-monitor
     obsidian
+    opentofu
     pass
     quickshell
     rustc

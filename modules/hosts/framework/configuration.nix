@@ -62,6 +62,7 @@
       pamixer
       pinentry-curses
       psmisc
+      python3
       ripgrep
       shadow
       tree

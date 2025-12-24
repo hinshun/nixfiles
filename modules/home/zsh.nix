@@ -14,6 +14,7 @@
       export ANTHROPIC_API_KEY=$(cat /run/agenix/anthropic-api)
       export OPENROUTER_API_KEY=$(cat /run/agenix/openrouter-api)
       export OPENAI_API_KEY=$(cat /run/agenix/openai-api)
+      export INFRACOST_API_KEY=$(cat /run/agenix/infracost-api)
     '';
   };
 
