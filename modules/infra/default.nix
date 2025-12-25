@@ -26,7 +26,7 @@
             ln -s ${tf-config} "$tmpdir/config.tf.json"
             export TF_DATA_DIR="$PWD/.terraform"
             ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" init -input=false
-            ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" plan -state="$PWD/terraform.tfstate"
+            ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" plan
           '');
         };
 
@@ -38,7 +38,7 @@
             ln -s ${tf-config} "$tmpdir/config.tf.json"
             export TF_DATA_DIR="$PWD/.terraform"
             ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" init -input=false
-            ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" apply -state="$PWD/terraform.tfstate"
+            ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" apply
           '');
         };
 
@@ -50,7 +50,7 @@
             ln -s ${tf-config} "$tmpdir/config.tf.json"
             export TF_DATA_DIR="$PWD/.terraform"
             ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" init -input=false
-            ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" destroy -state="$PWD/terraform.tfstate"
+            ${pkgs.opentofu}/bin/tofu -chdir="$tmpdir" destroy
           '');
         };
       };

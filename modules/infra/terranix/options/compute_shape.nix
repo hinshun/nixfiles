@@ -3,6 +3,15 @@
 with lib;
 
 let
+  # Standardized instance families across all clouds
+  instanceFamilies = [
+    "general"        # Standard balanced instances
+    "cpu-optimized"  # High CPU performance (dedicated vCPU)
+    "mem-optimized"  # High memory ratio
+    "disk-optimized" # High storage capacity
+    "cost-optimized" # Budget-friendly (Arm, shared, burstable)
+  ];
+
   # Compute shape type definition
   computeShapeType = types.submodule {
     options = {
@@ -22,8 +31,8 @@ let
       };
 
       family = mkOption {
-        type = types.str;
-        description = "Instance family (e.g., 'cpx', 'cax', 'cx' for hcloud)";
+        type = types.enum instanceFamilies;
+        description = "Standardized instance family";
       };
 
       cores = mkOption {

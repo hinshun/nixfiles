@@ -5,6 +5,15 @@ with lib;
 let
   cfg = config.compute;
 
+  # Standardized instance families
+  instanceFamilies = [
+    "general"
+    "cpu-optimized"
+    "mem-optimized"
+    "disk-optimized"
+    "cost-optimized"
+  ];
+
   # Requirements submodule
   requirementsType = types.submodule {
     options = {
@@ -26,10 +35,10 @@ let
         description = "Minimum disk size in GB";
       };
 
-      families = mkOption {
-        type = types.listOf types.str;
-        default = [];
-        description = "Allowed instance families (empty = any)";
+      family = mkOption {
+        type = types.enum ([ "any" ] ++ instanceFamilies);
+        default = "any";
+        description = "Instance family filter (any = no filtering)";
       };
     };
   };
@@ -39,7 +48,7 @@ let
     options = {
       enable = mkEnableOption "NixOS provisioning via nixos-anywhere";
 
-      config  = mkOption {
+      baseConfig  = mkOption {
         type = types.raw;
         default = null;
         description = "NixOS configuration (e.g., nixosConfigurations.minecraft)";
@@ -118,7 +127,7 @@ let
         shape.cores >= requirements.cores &&
         shape.mem >= requirements.mem &&
         shape.disk >= requirements.disk &&
-        (requirements.families == [] || elem shape.family requirements.families);
+        (requirements.family == "any" || shape.family == requirements.family);
 
       requirementFiltered = filter meetsRequirements cloudFiltered;
 
@@ -205,7 +214,7 @@ in {
 
       provisioner.local-exec = {
         command = let
-          cfg = inst.nixos.config;
+          cfg = inst.nixos.baseConfig;
           diskoScript = cfg.config.system.build.diskoScript;
           toplevel = cfg.config.system.build.toplevel;
         in concatStringsSep " " ([
@@ -216,5 +225,11 @@ in {
         ]);
       };
     }) nixosInstances;
+
+    # Generate outputs for instance IPs
+    output = mapAttrs (name: inst: {
+      value = getServerIpRef inst._resolved.shape.cloud name;
+      description = "Public IP address of ${name}";
+    }) enabledInstances;
   };
 }

@@ -26,16 +26,32 @@ def run_hcloud_command():
 
 
 def extract_family(name):
-    """Extract instance family from server type name.
+    """Map hcloud server type to standardized family name.
 
-    Examples:
-        cpx11 -> cpx
-        cax11 -> cax
-        cx22 -> cx
-        ccx13 -> ccx
+    Standardized families (same across all clouds):
+        - general: Standard balanced instances
+        - cpu-optimized: High CPU performance (dedicated vCPU)
+        - mem-optimized: High memory ratio
+        - disk-optimized: High storage capacity
+        - cost-optimized: Budget-friendly options (Arm, shared, etc.)
+
+    Hetzner mappings:
+        cx, cpx -> general (shared vCPU, x86)
+        cax -> cost-optimized (Arm64, cheaper)
+        ccx -> cpu-optimized (dedicated vCPU)
     """
+    # Extract the prefix (letters before numbers)
     match = re.match(r"^([a-z]+)", name)
-    return match.group(1) if match else name
+    prefix = match.group(1) if match else name
+
+    family_map = {
+        "cx": "general",
+        "cpx": "general",
+        "cax": "cost-optimized",
+        "ccx": "cpu-optimized",
+    }
+
+    return family_map.get(prefix, "general")
 
 
 def transform_server_type(server_type):

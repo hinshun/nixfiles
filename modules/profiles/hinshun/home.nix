@@ -64,6 +64,7 @@
     age
     asciinema
     asciinema-agg
+    awscli2
     cargo
     discord
     gcc

@@ -3,12 +3,12 @@
   compute.instances.minecraft = {
     name = "minecraft";
     requirements = {
-      cores = 2;
-      mem = 4;
+      cores = 8;
+      family = "cpu-optimized";
     };
     nixos = {
       enable = true;
-      config = nixosConfigurations.minimal;
+      baseConfig = nixosConfigurations.minimal;
     };
   };
 }

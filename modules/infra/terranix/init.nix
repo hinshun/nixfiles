@@ -6,6 +6,13 @@ let
   cfg = config.infra;
 in {
   config = {
+    terraform.backend.s3 = {
+      bucket = "hinshun-infra-terraform";
+      key = "terraform.tfstate";
+      region = "us-east-1";
+      use_lockfile = true;
+    };
+
     # Hetzner Cloud provider
     provider.hcloud = {
       token = ''''${trimspace(file("/run/agenix/hetzner-cloud"))}'';
