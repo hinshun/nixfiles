@@ -110,7 +110,7 @@
         "ui.highlight" = { bg = "medium-bg"; };
         "ui.highlight.frameline" = { bg = "#97202a"; };
 
-        "ui.linenr" = { fg = "medium-bg"; };
+        "ui.linenr" = { fg = "light-bg"; };
         "ui.linenr.selected" = { fg = "light-fg"; };
 
         "ui.statusline" = { fg = "white"; bg = "dark-bg"; };

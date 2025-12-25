@@ -1,9 +1,10 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
 let
   cfg = config.hcloud;
+  infraTypes = config.infra._types;
 
   # Import generated shape data
   shapesData = builtins.fromJSON (builtins.readFile ./data/hcloud-shapes.json);
@@ -65,6 +66,18 @@ let
         description = "Public network configuration";
       };
 
+      nixos-anywhere = mkOption {
+        type = infraTypes.nixosAnywhere;
+        default = {};
+        description = "NixOS provisioning via nixos-anywhere (initial install)";
+      };
+
+      colmena = mkOption {
+        type = infraTypes.colmena;
+        default = {};
+        description = "Colmena deployment configuration (ongoing updates)";
+      };
+
       extra = mkOption {
         type = types.attrsOf types.anything;
         default = {};
@@ -89,7 +102,11 @@ in {
     };
   };
 
-  config = {
+  config = let
+    enabledServers = filterAttrs (_: s: s.enable) cfg.servers;
+    nixosAnywhereServers = filterAttrs (_: s: s.nixos-anywhere.enable) enabledServers;
+    colmenaServers = filterAttrs (_: s: s.colmena.enable) enabledServers;
+  in {
     # Populate hcloud.compute_shapes from imported JSON
     hcloud.compute_shapes = shapesData;
 
@@ -111,6 +128,37 @@ in {
       }) // (optionalAttrs (serverCfg.datacenter == null && serverCfg.location != null) {
         location = serverCfg.location;
       }) // serverCfg.extra)
-    ) (filterAttrs (_: s: s.enable) cfg.servers);
+    ) enabledServers;
+
+    # Generate nixos-anywhere provisioners for hcloud servers
+    resource.null_resource = mapAttrs (name: serverCfg: {
+      depends_on = [ "hcloud_server.${name}" ];
+
+      triggers = {
+        server_id = "\${hcloud_server.${name}.id}";
+      };
+
+      provisioner.local-exec = {
+        command = let
+          nixosCfg = serverCfg.nixos-anywhere.config;
+          diskoScript = nixosCfg.config.system.build.diskoScript;
+          toplevel = nixosCfg.config.system.build.toplevel;
+        in concatStringsSep " " ([
+          "${pkgs.nixos-anywhere}/bin/nixos-anywhere"
+          "--store-paths ${diskoScript} ${toplevel}"
+        ] ++ serverCfg.nixos-anywhere.extraArgs ++ [
+          "${serverCfg.nixos-anywhere.sshUser}@\${hcloud_server.${name}.ipv4_address}"
+        ]);
+      };
+    }) nixosAnywhereServers;
+
+    # Generate outputs for hcloud server IPs
+    output = mapAttrs (name: _: {
+      value = "\${hcloud_server.${name}.ipv4_address}";
+      description = "Public IP address of ${name}";
+    }) enabledServers;
+
+    # Export colmena-enabled hcloud servers for hive generation
+    infra._colmenaInstances = colmenaServers;
   };
 }

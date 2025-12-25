@@ -50,6 +50,12 @@
       url = "github:terranix/terranix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    colmena = {
+      url = "github:zhaofengli/colmena";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nix-github-actions.follows = "";
+    };
   };
 
   outputs = inputs@{ nixpkgs, flake-parts, ... }:

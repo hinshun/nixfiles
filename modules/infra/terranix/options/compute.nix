@@ -4,6 +4,7 @@ with lib;
 
 let
   cfg = config.compute;
+  infraTypes = config.infra._types;
 
   # Standardized instance families
   instanceFamilies = [
@@ -43,31 +44,6 @@ let
     };
   };
 
-  # NixOS provisioning submodule
-  nixosType = types.submodule {
-    options = {
-      enable = mkEnableOption "NixOS provisioning via nixos-anywhere";
-
-      baseConfig  = mkOption {
-        type = types.raw;
-        default = null;
-        description = "NixOS configuration (e.g., nixosConfigurations.minecraft)";
-      };
-
-      sshUser = mkOption {
-        type = types.str;
-        default = "root";
-        description = "SSH user for nixos-anywhere";
-      };
-
-      extraArgs = mkOption {
-        type = types.listOf types.str;
-        default = [];
-        description = "Extra arguments to pass to nixos-anywhere";
-      };
-    };
-  };
-
   # Instance submodule
   instanceType = types.submodule ({ name, ... }: {
     options = {
@@ -91,10 +67,16 @@ let
         description = "Resource requirements for shape selection";
       };
 
-      nixos = mkOption {
-        type = nixosType;
+      nixos-anywhere = mkOption {
+        type = infraTypes.nixosAnywhere;
         default = {};
-        description = "NixOS provisioning configuration";
+        description = "NixOS provisioning via nixos-anywhere (initial install)";
+      };
+
+      colmena = mkOption {
+        type = infraTypes.colmena;
+        default = {};
+        description = "Colmena deployment configuration (ongoing updates)";
       };
 
       # Provider-specific overrides
@@ -178,9 +160,14 @@ in {
 
     allResolved = unresolvedInstances == {};
 
-    # Instances with nixos provisioning enabled
-    nixosInstances = filterAttrs
-      (_: inst: inst.nixos.enable)
+    # Instances with nixos-anywhere provisioning enabled
+    nixosAnywhereInstances = filterAttrs
+      (_: inst: inst.nixos-anywhere.enable)
+      enabledInstances;
+
+    # Instances with colmena deployment enabled
+    colmenaInstances = filterAttrs
+      (_: inst: inst.colmena.enable)
       enabledInstances;
 
     # Helper to get server IP reference based on cloud
@@ -214,22 +201,25 @@ in {
 
       provisioner.local-exec = {
         command = let
-          cfg = inst.nixos.baseConfig;
-          diskoScript = cfg.config.system.build.diskoScript;
-          toplevel = cfg.config.system.build.toplevel;
+          nixosCfg = inst.nixos-anywhere.config;
+          diskoScript = nixosCfg.config.system.build.diskoScript;
+          toplevel = nixosCfg.config.system.build.toplevel;
         in concatStringsSep " " ([
           "${pkgs.nixos-anywhere}/bin/nixos-anywhere"
           "--store-paths ${diskoScript} ${toplevel}"
-        ] ++ inst.nixos.extraArgs ++ [
-          "${inst.nixos.sshUser}@${getServerIpRef inst._resolved.shape.cloud name}"
+        ] ++ inst.nixos-anywhere.extraArgs ++ [
+          "${inst.nixos-anywhere.sshUser}@${getServerIpRef inst._resolved.shape.cloud name}"
         ]);
       };
-    }) nixosInstances;
+    }) nixosAnywhereInstances;
 
     # Generate outputs for instance IPs
     output = mapAttrs (name: inst: {
       value = getServerIpRef inst._resolved.shape.cloud name;
       description = "Public IP address of ${name}";
     }) enabledInstances;
+
+    # Export colmena instances for hive generation
+    infra._colmenaInstances = colmenaInstances;
   };
 }

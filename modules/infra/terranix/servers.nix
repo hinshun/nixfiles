@@ -1,4 +1,4 @@
-{ nixosConfigurations, ... }:
+{ ... }:
 {
   compute.instances.minecraft = {
     name = "minecraft";
@@ -6,9 +6,17 @@
       cores = 8;
       family = "cpu-optimized";
     };
-    nixos = {
+
+    colmena = {
       enable = true;
-      baseConfig = nixosConfigurations.minimal;
+      modules = { ... }: {
+        imports = [ ../../hosts/minimal/configuration.nix ];
+        services.minecraft-server = {
+          enable = true;
+          eula = true;
+        };
+        deployment.tags = [ "gaming" ];
+      };
     };
   };
 }

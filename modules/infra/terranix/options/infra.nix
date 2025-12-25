@@ -20,5 +20,12 @@ with lib;
       default = {};
       description = "SSH keys to provision across cloud providers";
     };
+
+    _colmenaInstances = mkOption {
+      type = types.attrsOf types.raw;
+      default = {};
+      internal = true;
+      description = "Instances with colmena.enable = true, used for hive generation";
+    };
   };
 }
