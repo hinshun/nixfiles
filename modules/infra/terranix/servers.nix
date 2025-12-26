@@ -9,8 +9,8 @@
 
     colmena = {
       enable = true;
-      modules = { ... }: {
-        imports = [ ../../hosts/minimal/configuration.nix ];
+      modules = { nixosModules, ... }: {
+        imports = [ nixosModules.cloud-minimal ];
         services.minecraft-server = {
           enable = true;
           eula = true;
