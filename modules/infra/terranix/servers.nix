@@ -9,7 +9,7 @@
 
     colmena = {
       enable = true;
-      modules = { nixosModules, ... }: {
+      module = { nixosModules, ... }: {
         imports = [ nixosModules.cloud-minimal ];
         services.minecraft-server = {
           enable = true;

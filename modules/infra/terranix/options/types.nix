@@ -34,13 +34,13 @@ let
     options = {
       enable = mkEnableOption "Colmena deployment for this instance";
 
-      modules = mkOption {
+      module = mkOption {
         type = types.raw;
         default = null;
         description = ''
           NixOS module for colmena deployment. Can include deployment options directly:
 
-          colmena.modules = { ... }: {
+          colmena.module = { ... }: {
             imports = [ ./path/to/configuration.nix ];
             deployment.tags = [ "web" ];
             deployment.targetUser = "root";

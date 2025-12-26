@@ -30,7 +30,7 @@ in {
         };
       };
     } // lib.mapAttrs (name: inst: { name, nodes, pkgs, ... }: {
-      imports = inst.colmena.modules;
+      imports = [ inst.colmena.module ];
     }) colmenaInstances);
 
     perSystem = { pkgs, system, ... }:
