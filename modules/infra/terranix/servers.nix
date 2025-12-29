@@ -45,8 +45,8 @@
         };
 
         systemd.services.minecraft-server = {
-          after = [ "mnt-zerofs.mount" ];
-          wants = [ "mnt-zerofs.mount" ];
+          after = [ "zerofs-zfs-setup.service" ];
+          wants = [ "zerofs-zfs-setup.service" ];
         };
 
         deployment.tags = [ "gaming" ];
