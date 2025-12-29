@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#raspberry_flavoured:rocky_dirt_biomes",
+  "features": "kubejs:rocky_dirt",
+  "step": "fluid_springs"
+}

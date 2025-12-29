@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#autumnity:has_structure/maple_hut",
+  "features": "kubejs:autumn_flowers",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "tag": "forge:cooked_beef"
+    },
+    {
+      "item": "kubejs:butter"
+    }
+  ],
+  "result": {
+    "item": "farmersdelight:stuffed_potato"
+  }
+}

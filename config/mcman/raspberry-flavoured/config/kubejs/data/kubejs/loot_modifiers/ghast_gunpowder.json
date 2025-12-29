@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:add_item",
+  "conditions": [
+	{
+      "condition": "minecraft:entity_properties",
+      "entity": "direct_killer",
+      "predicate": {
+        "type": "minecraft:fireball"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:ghast"
+      }
+    }
+  ],
+  "functions": [
+    {
+	  "add": false,
+	  "count": {
+	    "type": "minecraft:uniform",
+		"max": 6.0,
+		"min": 2.0
+	  },
+	  "function": "minecraft:set_count"
+    }
+  ],
+  "item": "minecraft:gunpowder"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "minecraft:dark_forest",
+  "spawners": [
+    {
+      "type": "minecraft:bat",
+      "maxCount": 12,
+      "minCount": 12,
+      "weight": 8
+    }
+  ]
+}

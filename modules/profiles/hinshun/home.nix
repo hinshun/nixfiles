@@ -78,6 +78,7 @@
     pass
     quickshell
     rustc
+    uv
     vlc
     weechat
     zoom-us

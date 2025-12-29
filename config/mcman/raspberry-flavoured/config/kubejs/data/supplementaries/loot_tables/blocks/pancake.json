@@ -1,0 +1,222 @@
+{
+  "type": "minecraft:block",
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ],
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "supplementaries:pancake",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 8
+                }
+              ],
+              "conditions": [
+			    {
+				  "condition": "minecraft:match_tool",
+				  "predicate": {
+					"tag": "farmersdelight:tools/knives"
+				  }
+				},
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "supplementaries:pancake",
+                  "properties": {
+                    "pancakes": "8"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "supplementaries:pancake",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 7
+                }
+              ],
+              "conditions": [
+			    {
+				  "condition": "minecraft:match_tool",
+				  "predicate": {
+					"tag": "farmersdelight:tools/knives"
+				  }
+				},
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "supplementaries:pancake",
+                  "properties": {
+                    "pancakes": "7"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "supplementaries:pancake",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 6
+                }
+              ],
+              "conditions": [
+			    {
+				  "condition": "minecraft:match_tool",
+				  "predicate": {
+					"tag": "farmersdelight:tools/knives"
+				  }
+				},
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "supplementaries:pancake",
+                  "properties": {
+                    "pancakes": "6"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "supplementaries:pancake",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 5
+                }
+              ],
+              "conditions": [
+			    {
+				  "condition": "minecraft:match_tool",
+				  "predicate": {
+					"tag": "farmersdelight:tools/knives"
+				  }
+				},
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "supplementaries:pancake",
+                  "properties": {
+                    "pancakes": "5"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "supplementaries:pancake",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 4
+                }
+              ],
+              "conditions": [
+			    {
+				  "condition": "minecraft:match_tool",
+				  "predicate": {
+					"tag": "farmersdelight:tools/knives"
+				  }
+				},
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "supplementaries:pancake",
+                  "properties": {
+                    "pancakes": "4"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "supplementaries:pancake",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 3
+                }
+              ],
+              "conditions": [
+			    {
+				  "condition": "minecraft:match_tool",
+				  "predicate": {
+					"tag": "farmersdelight:tools/knives"
+				  }
+				},
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "supplementaries:pancake",
+                  "properties": {
+                    "pancakes": "3"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "supplementaries:pancake",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 2
+                }
+              ],
+              "conditions": [
+			    {
+				  "condition": "minecraft:match_tool",
+				  "predicate": {
+					"tag": "farmersdelight:tools/knives"
+				  }
+				},
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "supplementaries:pancake",
+                  "properties": {
+                    "pancakes": "2"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "supplementaries:pancake",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 1
+                }
+              ],
+              "conditions": [
+			    {
+				  "condition": "minecraft:match_tool",
+				  "predicate": {
+					"tag": "farmersdelight:tools/knives"
+				  }
+				},
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "supplementaries:pancake",
+                  "properties": {
+                    "pancakes": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "supplementaries:pancake"
+}

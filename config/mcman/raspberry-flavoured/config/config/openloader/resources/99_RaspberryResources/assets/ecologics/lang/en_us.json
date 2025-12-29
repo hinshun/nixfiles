@@ -1,0 +1,15 @@
+{
+  "effect.ecologics.slippery": "Cold Feet",
+  
+  "item.ecologics.cooked_prickly_pear": "Stripped Prickly Pear",
+  "item.ecologics.crab_meat": "Cooked Crab Meat",
+  
+  "block.ecologics.pot": "Terracotta Pot",
+  "block.ecologics.surface_moss": "Lump of Moss",
+  
+  "block.ecologics.walnut_leaves": "Silver Birch Leaves",
+  
+  "entity.ecologics.chest_boat": "Boat with Barrel",
+  "item.ecologics.coconut_chest_boat": "Coconut Boat with Barrel",
+  "item.ecologics.azalea_chest_boat": "Azalea Boat with Barrel"
+}

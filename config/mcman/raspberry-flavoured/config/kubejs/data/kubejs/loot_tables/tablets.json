@@ -1,0 +1,76 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:blank_tablet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:aquatic_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:beastly_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:cyclic_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:enduring_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:flinging_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:glacial_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:hallowed_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:haunted_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:heavy_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:infested_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:otherworldly_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:piercing_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:pulling_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:silent_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:swift_tablet"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

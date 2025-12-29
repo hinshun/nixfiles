@@ -1,0 +1,15 @@
+{
+   "targets": [
+	"atmospheric:arid_sand",
+	"atmospheric:red_arid_sand"
+   ],
+   "sound_type": {
+      "break_sound": "kubejs:sound.arid_sand.break",
+	  "place_sound": "kubejs:sound.arid_sand.place",
+      "hit_sound": "kubejs:sound.arid_sand.hit",
+      "fall_sound": "kubejs:sound.arid_sand.fall",
+      "step_sound": "kubejs:sound.arid_sand.step",
+      "pitch": 1.0,
+      "volume": 1
+   } 
+}

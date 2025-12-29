@@ -1,0 +1,14 @@
+{
+   "targets": [
+   "upgrade_aquatic:tooth_lantern"
+   ],
+   "sound_type": {
+      "break_sound": "kubejs:sound.glowstone.break",
+	  "place_sound": "kubejs:sound.glowstone.place",
+      "hit_sound": "block.stone.hit",
+      "fall_sound": "block.stone.fall",
+      "step_sound": "block.stone.step",
+      "pitch": 1.5,
+      "volume": 1
+   } 
+}

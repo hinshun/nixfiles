@@ -1,0 +1,10 @@
+# default: true
+phantomStun = true
+# default: true
+phantomSizeTweak = true
+# default: true
+phantomSpawnHealthTweak = true
+# default: true
+phantomSpawnTimingTweak = true
+# default: true
+phantomSpawnCountTweak = true

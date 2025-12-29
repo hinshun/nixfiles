@@ -1,0 +1,97 @@
+type = menu
+
+customization-meta {
+  identifier = rfchangelog
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  path = config/fancymenu/fancymenu_assets/backgroundshadows.png
+  orientation = mid-centered
+  x = -261
+  width = 522
+  action = addtexture
+  actionid = ea4d23f3-9a9e-483d-b882-692af3fc4c2b1707261155019
+  y = -153
+  height = 295
+}
+
+customization {
+  orientation = mid-centered
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = &6&nMod List Changes:%n%&e- Added: &fScholar, Connectible Chains, Dynamic Crosshair, %n%Achievement Optimizer%n%&e- Updated: &fRaspberry Core, Immersive Overlays%n%%n%&6&nGameplay/Content Changes:%n%&e- &fArchitect's Palette's Parquetry blocks have been removed%n%&e- &fModest Mining's wooden Panels blocks %n%have been implemented, replacing Parquetry%n%&e- &fModest Mining's wooden Pillar blocks have been implemented%n%&e- &fBackported Minecraft 1.21.6's Leash mechanics %n%(implemented by evanbones)%n%&e- &fLeashes can now be tied between two Fences %n%by themselves (implemented by evanbones)%n%&e- &fChains can now be tied between two Fences or Walls %n%(with the addition of Connectible Chains, tweaked by evanbones)%n%&e- &fBook and Quills can now be dyed, show two pages at once and %n%have formatting options built-in (with the addition of Scholar, %n%backported by evanbones)%n%&e- &fCopycat Vertical Steps have been re-implemented%n%&e- &fSilver Ore now generates a bit more frequently and in a %n%bigger range of altitudes in Electrum Forests%n%&e- &fSilver Mirrors' damage has been nerfed to make it harder %n%to kill undead while trying to follow the Silver particle trail%n%&e- &fSilver Mirrors, Deeds of Ownership, %n%Train Stations and Leashes are now cheaper to craft%n%&e- &fCompasses and Depth Gauges now have Sequenced Assembly recipes%n%&e- &fHanging Signs are now crafted using Chains %n%instead of Iron Nuggets, but output 3 rather than 2%n%&e- &fBoards can now be converted back into Planks using a Table Saw%n%&e- &fSnail Master Potions are now more expensive to brew%n%&e- &fAdded storage blocks for Button Mushrooms, Crimini, Portabellas, %n%Milly Bubcap Mushrooms, Crimson Fungi, Warped Fungi %n%and Choral Fungi (textures by lurkywho)%n%&e- &fAdded Ghast Rolls%n%&e- &fRemoved Purulent Tea%n%&e- &fSnow Top Green Tea, Yellow Tea, Black Tea and Coffee's %n%amplification/extension effects have %n%been replaced with regular status effects%n%&e- &fCabbage Rolls and Bat Rolls now require Tomato Sauce and %n%Glowgurt in their recipes respectively but have been buffed slightly%n%&e- &fCabbage Rolls, Rustic Loaf Slices and all Toasts %n%can now be consumed twice as fast%n%&e- &fAll Ice Cream is now made with Milk instead of Butter%n%&e- &fPie Crust is now made with Butter instead of Salt%n%&e- &fMinecart riding speed has been reduced from %n%34 blocks per second down to 20 (and has been made configurable)%n%&e- &fThe Pouch of Sorcery can now rarely contain Shimmershrooms%n%&e- &fCat morning gift loot table has been tweaked%n%&e- &fParagliders can now be %n%enchanted with Vitality (implemented by cassiancc)%n%%n%&6&nCosmetic/Aesthetic Changes:%n%&e- &fRe-added Dynamic Crosshair, now hopefully %n%without it hiding the crosshair at random%n%&e- &fBackported Minecraft 1.21.6's Music Toast and %n%Frequency settings (implemented by evanbones)%n%&e- &fEMI will now display workstations for %n%recipe types by default (tweaked by cassiancc)%n%&e- &fEMI will now display recipe duration for %n%Fermenting recipes (implemented by cassiancc)%n%&e- &fAdobe Bricks have been renamed to Large Bricks and %n%their textures have been changed (new textures by Kayla_the_Bee)%n%&e- &fBlock of Bronze texture %n%has been changed (new texture by ProbablyEkho)%n%&e- &fFlax and Leash item textures have been changed%n%&e- &fWheat and Diamond item textures have been tweaked%n%&e- &fExokin and Exovaults' colour palettes have been tweaked%n%%n%&6&nFixes/Technical Changes:%n%&e- &fVarious tabs are no longer missing from EMI (fixed by cassiancc)%n%&e- &fSpiders no longer act as entirely ranged enemies, attacking entities %n%caught in Temporary Cobwebs as intended (fixed by evanbones)%n%&e- &fTemporary Cobwebs are no longer %n%unaffected by the Bracewalk enchantment%n%&e- &fThe Bracewalk enchantment can no longer %n%break Sweet Berry Bushes%n%&e- &fAllays are no longer unable to duplicate %n%near Jukeboxes (fixed by evanbones)%n%&e- &fMounted entities shot with Lachryte Arrows %n%will now swap with the attacker rather than %n%staying in place (fixed by Kobber)%n%&e- &fDispensers are no longer unable to %n%shoot Lachryte Arrows (fixed by Kobber)%n%&e- &fFixed certain Slab blocks still using 3x3 recipes%n%&e- &fFixed some incorrect or missing cutting recipes%n%&e- &fFixed some incorrect recycling recipe outputs%n%&e- &fFixed incorrect item names%n%&e- &fFixed certain items not being compostable%n%&e- &fAdded utility tags to items previously missing them%n%&e- &fDisabled large Lead veins for the time being%n%&e- &fAll Cake Slices are now consistently %n%unable to be eaten while full%n%&e- &fHidden resource packs will (hopefully) %n%no longer appear in the resource pack menu%n%&e- &fExokin Heads no longer have the %n%vanilla Enderman texture when worn%n%&e- &fThe "Brewing Bad" painting no longer %n%has the vanilla Witch texture
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -193
+  width = 387
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 0753e5b4-7a02-4d4e-8877-037b5dfb73041690066138901
+  y = -94
+  alignment = left
+  height = 167
+}
+
+customization {
+  orientation = mid-centered
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  buttonaction = closegui%btnaction_splitter_fm%
+  x = -102
+  width = 204
+  action = addbutton
+  actionid = 6d5a4aa0-6dcc-4ede-a838-09c3de7a27731690067224501
+  y = 78
+  label = Done
+  height = 20
+}
+
+customization {
+  orientation = mid-centered
+  enable_scrolling = false
+  shadow = true
+  scale = 1.35
+  source = &o&nRASPBERRY FLAVOURED 3.2.1 CHANGELOG
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -192
+  width = 385
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 7c1eae62-f707-4682-90c9-eb6896e7a41c1701372163321
+  y = -112
+  alignment = centered
+  base_color = E8587C
+  height = 16
+}
+
+customization {
+  orientation = element
+  restartbackgroundanimations = true
+  buttonaction = openlink;https://discord.gg/jxNe26WNYh%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/fancymenu_assets/discordbuttonhover.png
+  description = Join the RF%n%Discord server!
+  label = 
+  loopbackgroundanimations = true
+  orientation_element = 6d5a4aa0-6dcc-4ede-a838-09c3de7a27731690067224501
+  x = 288
+  width = 20
+  action = addbutton
+  actionid = 3fd0d2f5-5337-4a56-b5a4-4679af6a36c01714671721695
+  y = 0
+  backgroundnormal = config/fancymenu/fancymenu_assets/discordbutton.png
+  height = 20
+}
+

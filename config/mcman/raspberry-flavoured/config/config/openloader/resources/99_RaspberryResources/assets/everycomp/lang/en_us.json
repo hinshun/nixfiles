@@ -1,0 +1,16 @@
+{
+  "wood_type.architects_palette.twisted": "Choral",
+  "block_type.architects_palette.boards": "%s Parquetry",
+  "block_type.architects_palette.board_wall": "%s Parquetry Wall",
+  "block_type.architects_palette.board_stairs": "%s Parquetry Stairs",
+  "block_type.architects_palette.board_slab": "%s Parquetry Slab",
+  "block.everycomp.q.architects_palette.hollow_twisted_log": "Hollow Choral Stem",
+  
+  "block.everycomp.mm.upgrade_aquatic.river_boards": "Choral Panels",
+  "block.everycomp.mm.upgrade_aquatic.river_board_slab": "Choral Panel Slab",
+  "block.everycomp.mm.upgrade_aquatic.river_board_wall": "Choral Panel Wall",
+  "block.everycomp.mm.upgrade_aquatic.river_board_stairs": "Choral Panel Stairs",
+  
+  "block.everycomp.q.ecologics.walnut_hedge": "Silver Birch Leaf Hedge",
+  "block.everycomp.abnww.ecologics.walnut_leaf_pile": "Pile of Silver Birch Leaves"
+}

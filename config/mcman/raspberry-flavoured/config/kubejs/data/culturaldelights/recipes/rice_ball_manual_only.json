@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "spelunkery:salt"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "tag": "raspberry_flavoured:raw_fish"
+    }
+  ],
+  "result": {
+    "item": "culturaldelights:rice_ball",
+    "count": 6
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "filters": [
+    {
+      "category": "minecraft:brewing"
+    },
+    {
+      "category": "minecraft:blasting"
+    },
+    {
+      "category": "minecraft:smoking"
+    },
+    {
+      "category": "clayworks:baking"
+    },
+    {
+      "category": "emi:anvil_repairing"
+    },
+	{
+      "category": "emi:grinding"
+    },
+	{
+      "category": "emi:world_interaction"
+    },
+	{
+      "category": "miners_delight:cooking"
+    },
+	{
+      "category": "brewinandchewin:flaxen_cheese_ripening"
+    },
+	{
+      "category": "brewinandchewin:scarlet_cheese_ripening"
+    },
+	{
+      "category": "pollen:grindstone"
+    },
+	{
+      "category": "copperized:axe_scraping"
+    },
+	{
+      "category": "copperized:oxidation"
+    },
+	{
+      "category": "copperized:waxing"
+    },
+	{
+      "category": "farmersrespite:brewing"
+    },
+	{
+      "category": "exposure:photograph_stacking"
+    },
+	{
+      "category": "nethersdelight:composition"
+    },
+	{
+      "category": "mynethersdelight:forgoting"
+    },
+	{
+      "category": "tactical_fishing:fishing"
+    },
+	{
+      "category": "create:automatic_brewing"
+    },
+	{
+      "category": "create_central_kitchen:cutting_board_deploying"
+    },
+	{
+      "category": "miningmaster:forging"
+    },
+	{
+      "category": "woodworks:sawing"
+    },
+	{
+      "category": "farmersdelight:decomposition"
+    }
+  ]
+}

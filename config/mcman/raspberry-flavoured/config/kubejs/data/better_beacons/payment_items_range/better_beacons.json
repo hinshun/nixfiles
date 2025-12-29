@@ -1,0 +1,80 @@
+{
+  "values": [
+    {
+      "item": "minecraft:copper_ingot",
+      "range": 0
+    },
+    {
+      "item": "create:polished_rose_quartz",
+      "range": 15
+    },
+    {
+      "item": "minecraft:amethyst_shard",
+      "range": 15
+    },
+    {
+      "item": "spelunkery:cinnabar",
+      "range": 30
+    },
+    {
+      "item": "minecraft:iron_ingot",
+      "range": 30
+    },
+    {
+      "item": "create:zinc_ingot",
+      "range": 30
+    },
+    {
+      "item": "oreganized:lead_ingot",
+      "range": 30
+    },
+    {
+      "item": "minecraft:gold_ingot",
+      "range": 30
+    },
+    {
+      "item": "create:brass_ingot",
+      "range": 45
+    },
+    {
+      "item": "alloyed:bronze_ingot",
+      "range": 45
+    },
+    {
+      "item": "additionaladditions:rose_gold_alloy",
+      "range": 45
+    },
+    {
+      "item": "alloyed:steel_ingot",
+      "range": 60
+    },
+    {
+      "item": "minecraft:echo_shard",
+      "range": 60
+    },
+    {
+      "item": "minecraft:ender_pearl",
+      "range": 85
+    },
+    {
+      "item": "minecraft:diamond",
+      "range": 85
+    },
+    {
+      "item": "oreganized:silver_ingot",
+      "range": 85
+    },
+    {
+      "item": "oreganized:electrum_ingot",
+      "range": 100
+    },
+    {
+      "item": "caverns_and_chasms:necromium_ingot",
+      "range": 125
+    },
+    {
+      "item": "minecraft:netherite_ingot",
+      "range": 150
+    }
+  ]
+}

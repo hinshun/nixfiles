@@ -25,6 +25,22 @@ let
         default = [];
         description = "Extra arguments to pass to nixos-anywhere";
       };
+
+      agenix = {
+        enable = mkEnableOption "agenix key provisioning" // { default = true; };
+
+        keySource = mkOption {
+          type = types.str;
+          default = "/run/agenix/infra-age-key";
+          description = "Source path of the age key on the local machine";
+        };
+
+        keyDestination = mkOption {
+          type = types.str;
+          default = "/var/lib/agenix/key.txt";
+          description = "Destination path for the age key on the remote machine";
+        };
+      };
     };
   };
 

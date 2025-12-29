@@ -23,6 +23,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mcman = {
+      url = "github:hinshun/mcman?ref=feature/packwiz-server-only";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-snapshotter = {
       url = "github:pdtpartners/nix-snapshotter?ref=feature/buildkit";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -56,6 +61,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nix-github-actions.follows = "";
     };
+
+    zerofs = {
+      url = "github:hinshun/zerofs/feature/nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, flake-parts, ... }:
@@ -68,5 +78,8 @@
       systems = [ "x86_64-linux" ];
       imports = [ ./modules ];
       flake.nixpkgs = nixpkgs;
+      flake.lib = nixpkgs.lib.extend(final: prev:
+        import ./lib { lib = final; }
+      );
     };
 }

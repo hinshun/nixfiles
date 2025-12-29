@@ -1,0 +1,82 @@
+{
+  "enabled": true,
+  "interval": 10,
+  "entries": [
+    {
+      "block": [
+        "minecraft:diamond_block",
+        "minecraft:diamond_ore",
+        "minecraft:deepslate_diamond_ore",
+        "oreganized:silver_ore",
+        "oreganized:deepslate_silver_ore",
+        "oreganized:silver_block",
+        "oreganized:raw_silver_block"
+      ],
+      "particle": {
+        "type": "visuality:sparkle",
+        "value": [
+          0.7058824,
+          0.99215686,
+          0.93333334
+        ]
+      }
+    },
+    {
+      "block": "oreganized:electrum_block",
+      "particle": {
+        "type": "visuality:sparkle",
+        "value": [
+          0.99607843,
+          1.0,
+          0.7411765
+        ]
+      }
+    },
+    {
+      "block": "minecraft:amethyst_cluster",
+      "particle": {
+        "type": "visuality:sparkle",
+        "value": [
+          0.99607843,
+          0.79607844,
+          0.9019608
+        ]
+      }
+    },
+    {
+      "block": [
+        "minecraft:magma_block",
+        "kubejs:heating_cask"
+      ],
+      "particle": {
+        "type": "minecraft:smoke"
+      }
+    },
+    {
+      "block": "kubejs:ice_crate",
+      "particle": {
+        "type": "farmersdelight:steam"
+      }
+    },
+    {
+      "block": [
+        "kubejs:lachryte",
+        "kubejs:lachryte_slab",
+        "kubejs:lachryte_stairs",
+        "kubejs:lachryte_wall",
+        "kubejs:polished_lachryte",
+        "kubejs:polished_lachryte_slab",
+        "kubejs:polished_lachryte_stairs",
+        "kubejs:polished_lachryte_wall",
+        "kubejs:chiseled_lachryte",
+        "kubejs:lachryte_bricks",
+        "kubejs:lachryte_brick_slab",
+        "kubejs:lachryte_brick_stairs",
+        "kubejs:lachryte_brick_wall"
+      ],
+      "particle": {
+        "type": "minecraft:portal"
+      }
+    }
+  ]
+}

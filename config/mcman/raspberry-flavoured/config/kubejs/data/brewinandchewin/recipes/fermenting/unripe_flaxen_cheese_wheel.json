@@ -1,0 +1,27 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "container": {
+    "item": "minecraft:honeycomb"
+  },
+  "experience": 1,
+  "fermentingtime": 4800,
+  "fluiditem": {
+    "tag": "forge:milk"
+  },
+  "ingredients": [
+    {
+      "tag": "raspberry_flavoured:edible_mushrooms"
+    },
+    {
+      "tag": "raspberry_flavoured:edible_mushrooms"
+    },
+    {
+      "item": "spelunkery:salt"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "brewinandchewin:flaxen_cheese_wheel"
+  },
+  "temperature": 4
+}

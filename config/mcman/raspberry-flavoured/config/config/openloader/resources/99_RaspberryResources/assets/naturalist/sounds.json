@@ -1,0 +1,163 @@
+{
+  "entity.boar.ambient": {
+  "replace": true,
+    "sounds": [
+	  {
+        "name": "naturalist:boar/idle1",
+        "pitch": 2
+      },
+	  {
+        "name": "naturalist:boar/idle2",
+        "pitch": 2
+      },
+	  {
+        "name": "naturalist:boar/idle3",
+        "pitch": 2
+      },
+	  {
+        "name": "naturalist:boar/idle4",
+        "pitch": 2
+      },
+	  {
+        "name": "naturalist:boar/idle5",
+        "pitch": 2
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.boar.ambient"
+  },
+  "entity.boar.hurt": {
+  "replace": true,
+    "sounds": [
+      {
+        "name": "naturalist:boar/hurt1",
+        "pitch": 2
+      },
+	  {
+        "name": "naturalist:boar/hurt2",
+        "pitch": 2
+      },
+	  {
+        "name": "naturalist:boar/hurt3",
+        "pitch": 2
+      },
+	  {
+        "name": "naturalist:boar/hurt4",
+        "pitch": 2
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.boar.hurt"
+    },
+  "entity.boar.death": {
+  "replace": true,
+    "sounds": [
+      {
+        "name": "naturalist:boar/death1",
+        "pitch": 1.75
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.boar.death"
+    },
+  "entity.boar.step": {
+  "replace": true,
+    "sounds": [
+      "minecraft:mob/pig/step1",
+      "minecraft:mob/pig/step2",
+      "minecraft:mob/pig/step3",
+      "minecraft:mob/pig/step4"
+    ],
+    "subtitle": "naturalist.subtitles.entity.boar.step"
+  },
+  "entity.zebra.ambient": {
+  "replace": true,
+    "sounds": [
+	  {
+        "name": "environmental:mob/zebra/idle1"
+      },
+	  {
+        "name": "environmental:mob/zebra/idle2"
+      },
+	  {
+        "name": "environmental:mob/zebra/idle3"
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.zebra.ambient"
+  },
+  "entity.zebra.hurt": {
+  "replace": true,
+    "sounds": [
+      {
+        "name": "environmental:mob/zebra/hit1"
+      },
+	  {
+        "name": "environmental:mob/zebra/hit2"
+      },
+	  {
+        "name": "environmental:mob/zebra/hit3"
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.zebra.hurt"
+  },
+  "entity.zebra.death": {
+  "replace": true,
+    "sounds": [
+	  {
+        "name": "environmental:mob/zebra/death"
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.zebra.death"
+  },
+  "entity.zebra.eat": {
+  "replace": true,
+    "sounds": [
+	  {
+        "name": "entity/horse/eat1"
+      },
+	  {
+        "name": "entity/horse/eat2"
+      },
+	  {
+        "name": "entity/horse/eat3"
+      },
+	  {
+        "name": "entity/horse/eat4"
+      },
+	  {
+        "name": "entity/horse/eat5"
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.zebra.eat"
+  },
+  "entity.zebra.breathe": {
+  "replace": true,
+    "sounds": [
+	  {
+        "name": "environmental:mob/zebra/breathe1"
+      },
+	  {
+        "name": "environmental:mob/zebra/breathe2"
+      },
+	  {
+        "name": "environmental:mob/zebra/breathe3"
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.zebra.breathe"
+  },
+  "entity.zebra.angry": {
+  "replace": true,
+    "sounds": [
+	  {
+        "name": "environmental:mob/zebra/angry1"
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.zebra.angry"
+  },
+  "entity.zebra.jump": {
+  "replace": true,
+    "sounds": [
+	  {
+        "name": "minecraft:mob/horse/jump"
+      }
+    ],
+    "subtitle": "naturalist.subtitles.entity.zebra.jump"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#raspberry_flavoured:cat_spawns",
+  "spawners": {
+    "type": "minecraft:ocelot",
+    "maxCount": 4,
+    "minCount": 3,
+    "weight": 10
+  }
+}

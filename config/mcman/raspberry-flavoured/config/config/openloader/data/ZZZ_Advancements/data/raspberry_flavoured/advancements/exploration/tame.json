@@ -1,0 +1,33 @@
+{
+  "parent": "raspberry_flavoured:exploration/adventure_tools",
+  "criteria": {
+    "0": {
+      "conditions": {},
+      "trigger": "minecraft:tame_animal"
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.rf.exploration.tame.title"
+    },
+    "description": {
+      "color": "#CE3131",
+      "translate": "advancements.rf.exploration.tame.description"
+    },
+    "icon": {
+      "item": "domesticationinnovation:collar_tag"
+    },
+    "frame": "task",
+    "hidden": false,
+    "announce_to_chat": true,
+    "show_toast": true
+  },
+  "rewards": {
+      "function": "raspberry_flavoured:sound_regular"
+    },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

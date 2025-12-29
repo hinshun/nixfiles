@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "minecraft:item/copper_wrench"
+	},
+    "overrides": [
+        {
+            "predicate": {
+                "damaged": 1,
+                "damage": 0.25
+            },
+            "model": "supplementaries:item/exposed_copper_wrench"
+        },
+        {
+            "predicate": {
+                "damaged": 1,
+                "damage": 0.5
+            },
+            "model": "supplementaries:item/weathered_copper_wrench"
+        },
+        {
+            "predicate": {
+                "damaged": 1,
+                "damage": 0.75
+            },
+            "model": "supplementaries:item/oxidized_copper_wrench"
+        }
+    ]
+}

@@ -1,0 +1,313 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.TitleScreen
+  randomgroup = 1
+  renderorder = background
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  orientation = element
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 0
+  action = movebutton
+  y = 23
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if][req_id:6572feff-fa84-4e9f-bc99-11eb4bc752361726771062524] = importantmessage:false
+  action = vanilla_button_visibility_requirements
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
+  orientation = top-left
+  x = 424
+  action = movebutton
+  y = 250
+}
+
+customization {
+  identifier = %id=628382%
+  orientation = element
+  orientation_element = e72ff7e0-6b52-49ef-a5ac-8e6f9203fd3c1714670605984
+  x = 24
+  action = movebutton
+  y = 0
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  orientation = element
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 0
+  action = movebutton
+  y = 57
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  orientation = element
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 102
+  action = movebutton
+  y = 57
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_copyright_button%
+  orientation = bottom-centered
+  x = -99
+  action = movebutton
+  y = -15
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  orientation = top-left
+  x = 196
+  action = movebutton
+  y = 250
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = -7
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if][req_id:49686f83-fba1-4cc1-bed9-5a5e679c79741713553155857] = importantmessage:false
+  action = vanilla_button_visibility_requirements
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  orientation = element
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 102
+  action = movebutton
+  y = 23
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  action = setbuttonlabel
+  value = Mods & Configs
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_realms_button%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=376346%
+  action = hidebutton
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 186
+  width = 268
+  action = deep_customization_element:title_screen_forge_top
+  actionid = 4811d2ba-502d-4f12-9f7a-3e8015a82bb71688230078480
+  y = 4
+  height = 19
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 2
+  width = 108
+  action = deep_customization_element:title_screen_branding
+  actionid = 911ff414-d394-401d-bc11-b6962ee159c51688230078480
+  y = 297
+  height = 40
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 411
+  width = 228
+  action = deep_customization_element:title_screen_forge_copyright
+  actionid = 03273e29-18e7-4a8f-95c1-5e9b18de03cc1688230078480
+  y = 340
+  height = 9
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 423
+  width = 13
+  action = deep_customization_element:title_screen_realms_notification
+  actionid = 184d3ccc-7c57-46ef-bcfd-d869664f931d1688230078480
+  y = 190
+  height = 13
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 183
+  width = 274
+  action = deep_customization_element:title_screen_logo
+  actionid = 2cc92916-5b5d-40ee-b9ff-5b246e954b651688230078480
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = top-left
+  splash_color = #ffff00
+  hidden = true
+  x = 55
+  width = 60
+  splash_rotation = 0
+  action = deep_customization_element:title_screen_splash
+  actionid = 8a21223e-c476-46f8-8136-c4f4f80112071688230078480
+  y = 123
+  height = 30
+}
+
+customization {
+  path = config/fancymenu/fancymenu_assets/boxbackground.png
+  orientation = element
+  orientation_element = e72ff7e0-6b52-49ef-a5ac-8e6f9203fd3c1714670605984
+  x = -4
+  width = 100
+  action = addtexture
+  actionid = 092ae522-ab01-400f-b608-a03e8814b7691726773716579
+  y = -2
+  height = 25
+}
+
+customization {
+  path = config/fancymenu/fancymenu_assets/raspberry_flavoured_newest_logo.png
+  orientation = mid-centered
+  x = -124
+  width = 249
+  action = addtexture
+  actionid = 30b81f89-2f5f-4fcf-aafd-2ab58457c3321726775457550
+  y = -106
+  height = 62
+}
+
+customization {
+  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if][req_id:49b27935-3019-4253-84e5-c89431af4a851713554423538] = importantmessage:true
+  orientation = mid-centered
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  buttonaction = opencustomgui;rfwarning%btnaction_splitter_fm%set_variable;importantmessage:false%btnaction_splitter_fm%
+  x = -100
+  width = 200
+  action = addbutton
+  actionid = ad42939d-ae19-4080-a71b-3afa21bf2b151713554368206
+  y = 16
+  label = Read before you play!
+  height = 20
+}
+
+customization {
+  orientation = element
+  restartbackgroundanimations = true
+  buttonaction = opengui;rfchangelog%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/fancymenu_assets/changelogbuttonhover.png
+  description = Changelog
+  label = 
+  loopbackgroundanimations = true
+  orientation_element = e72ff7e0-6b52-49ef-a5ac-8e6f9203fd3c1714670605984
+  x = 48
+  width = 20
+  action = addbutton
+  actionid = 50af0d28-3c73-43ff-ada2-dad4847642541690110148460
+  y = 0
+  backgroundnormal = config/fancymenu/fancymenu_assets/changelogbutton.png
+  height = 20
+}
+
+customization {
+  orientation = element
+  restartbackgroundanimations = true
+  buttonaction = opengui;rfcredits%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/fancymenu_assets/creditsbuttonhover.png
+  description = Credits
+  label = 
+  loopbackgroundanimations = true
+  hoverlabel = 
+  orientation_element = e72ff7e0-6b52-49ef-a5ac-8e6f9203fd3c1714670605984
+  x = 72
+  width = 20
+  action = addbutton
+  actionid = 7f555a26-b6e9-482f-94fb-1b1144897b7d1690110148460
+  y = 0
+  backgroundnormal = config/fancymenu/fancymenu_assets/creditsbutton.png
+  height = 20
+}
+
+customization {
+  orientation = element
+  basecolor = FFA88C
+  shadow = true
+  splashfilepath = config/fancymenu/fancymenu_assets/splashes.txt
+  rotation = -20.0
+  scale = 1.0
+  refresh = true
+  bouncing = true
+  vanilla-like = false
+  orientation_element = 30b81f89-2f5f-4fcf-aafd-2ab58457c3321726775457550
+  x = 201
+  actionid = 86e8d141-020a-4f25-9811-f5ad155ca9881713129827940
+  action = addsplash
+  y = 46
+}
+
+customization {
+  orientation = element
+  restartbackgroundanimations = true
+  buttonaction = join_last_world%btnaction_splitter_fm%
+  backgroundhovered = config/fancymenu/fancymenu_assets/lastworldbuttonhover.png
+  description = Play Last World
+  label = 
+  loopbackgroundanimations = true
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 54
+  width = 20
+  action = addbutton
+  actionid = e72ff7e0-6b52-49ef-a5ac-8e6f9203fd3c1714670605984
+  y = 82
+  backgroundnormal = config/fancymenu/fancymenu_assets/lastworldbutton.png
+  height = 20
+}
+

@@ -1,0 +1,14 @@
+{
+   "targets": [
+	"spelunkery:salt"
+   ],
+   "sound_type": {
+      "break_sound": "kubejs:sound.arid_sand.break",
+	  "place_sound": "kubejs:sound.arid_sand.place",
+      "hit_sound": "kubejs:sound.arid_sand.hit",
+      "fall_sound": "kubejs:sound.arid_sand.fall",
+      "step_sound": "kubejs:sound.arid_sand.step",
+      "pitch": 1.3,
+      "volume": 1
+   } 
+}

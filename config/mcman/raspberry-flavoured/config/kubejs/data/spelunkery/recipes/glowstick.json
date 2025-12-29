@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "X",
+    "/"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:slime_ball"
+    },
+    "X": [
+      {
+        "item": "minecraft:glow_ink_sac"
+      },
+      {
+        "tag": "raspberry_flavoured:glowing_mushrooms"
+      }
+    ],
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "spelunkery:glowstick",
+    "count": 6
+  }
+}

@@ -30,8 +30,16 @@ in {
   ];
 
   age.secrets = {
+    infra-age-key = {
+      file = secrets.ageSecrets.infra-age-key;
+    } // user_readable;
+
     anthropic-api = {
       file = secrets.ageSecrets.anthropic-api;
+    } // user_readable;
+
+    curseforge-api = {
+      file = secrets.ageSecrets.curseforge-api;
     } // user_readable;
 
     hetzner-cloud = {

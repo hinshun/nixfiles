@@ -6,6 +6,7 @@ let
     inherit (inputs.home-manager.nixosModules) home-manager;
     inherit (inputs.nix-snapshotter.nixosModules) nix-snapshotter;
     inherit (inputs.nixos-hardware.nixosModules) framework-11th-gen-intel;
+    inherit (inputs.zerofs.nixosModules) zerofs;
   };
 
 in {

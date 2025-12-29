@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "kubejs:cobbled_blackstone"
+    }
+  },
+  "result": {
+    "item": "quark:blackstone_furnace"
+  },
+  "conditions": [
+      {
+        "type": "quark:flag",
+        "flag": "variant_furnaces"
+      }
+  ]
+}
+

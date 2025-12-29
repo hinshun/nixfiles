@@ -1,0 +1,143 @@
+{
+  "parent": "raspberry_flavoured:farming/oven",
+  "criteria": {
+    "Use Jar of Honey on a Pancake": {
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:honey_bottle"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+              "supplementaries:pancake"
+            ],
+            "state": {
+              "topping": "honey"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:item_used_on_block"
+    },
+    "Use Jar of Jam on a Pancake": {
+      "conditions": {
+        "item": {
+          "items": [
+            "upgrade_aquatic:mulberry_jam_bottle"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+              "supplementaries:pancake"
+            ],
+            "state": {
+              "topping": "jam"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:item_used_on_block"
+    },
+    "Use Bottle of Syrup on a Pancake": {
+      "conditions": {
+        "item": {
+          "items": [
+            "autumnity:syrup_bottle"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+              "supplementaries:pancake"
+            ],
+            "state": {
+              "topping": "syrup"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:item_used_on_block"
+    },
+    "Use Bar of Chocolate on a Pancake": {
+      "conditions": {
+        "item": {
+          "items": [
+            "neapolitan:chocolate_bar"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+              "supplementaries:pancake"
+            ],
+            "state": {
+              "topping": "chocolate"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:item_used_on_block"
+    },
+    "Use Lemon on a Pancake": {
+      "conditions": {
+        "item": {
+          "items": [
+            "cookscollection:lemon"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+              "raspberry:lemon_pancake"
+            ],
+            "state": {
+              "lemon_topping": "true"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.rf.farming.all_pancakes.title"
+    },
+    "description": {
+      "color": "#C44E00",
+      "translate": "advancements.rf.farming.all_pancakes.description"
+    },
+    "icon": {
+      "item": "supplementaries:pancake",
+      "nbt": "{\"quark:RuneAttached\": 1b, Enchantments: [{id:\"minecraft:smite\", lvl: 1}], \"quark:RuneColor\": {id: \"quark:rainbow_rune\", Count: 1b}}"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "announce_to_chat": true,
+    "show_toast": true
+  },
+  "rewards": {
+      "function": "raspberry_flavoured:sound_goal"
+    },
+  "requirements": [
+    [
+      "Use Jar of Honey on a Pancake"
+    ],
+    [
+      "Use Jar of Jam on a Pancake"
+    ],
+    [
+      "Use Bottle of Syrup on a Pancake"
+    ],
+    [
+      "Use Bar of Chocolate on a Pancake"
+    ],
+    [
+      "Use Lemon on a Pancake"
+    ]
+  ]
+}
+    

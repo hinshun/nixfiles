@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "tag": "raspberry_flavoured:cave_seafood"
+    },
+    {
+      "tag": "raspberry_flavoured:moss"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "tag": "forge:rods/wooden"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "miners_delight:improvised_barbecue_stick"
+  }
+}

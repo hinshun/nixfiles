@@ -1,0 +1,36 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.inventory.InventoryScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=570488%
+  orientation = mid-centered
+  x = 72
+  action = movebutton
+  y = -14
+}
+
+customization {
+  identifier = %id=516478%
+  orientation = mid-centered
+  x = 53
+  action = movebutton
+  y = -64
+}
+
+customization {
+  identifier = %id=438425%
+  action = hidebutton
+}
+

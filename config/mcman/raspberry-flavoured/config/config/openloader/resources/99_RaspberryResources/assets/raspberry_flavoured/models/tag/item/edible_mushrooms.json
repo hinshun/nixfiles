@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "raspberry_flavoured:tag/raspberry_flavoured/edible_mushrooms"
+  }
+}

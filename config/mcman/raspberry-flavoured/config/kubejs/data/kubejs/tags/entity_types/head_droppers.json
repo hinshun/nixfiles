@@ -1,0 +1,16 @@
+{
+  "values": [
+    "minecraft:zombie",
+	"minecraft:creeper",
+	"minecraft:enderman",
+	"minecraft:skeleton",
+	"minecraft:wither_skeleton",
+	"minecraft:piglin",
+	"minecraft:piglin_brute",
+	"minecraft:zombified_piglin",
+	"piglinproliferation:piglin_alchemist",
+	"caverns_and_chasms:deeper",
+	"caverns_and_chasms:peeper",
+	"caverns_and_chasms:mime"
+  ]
+}

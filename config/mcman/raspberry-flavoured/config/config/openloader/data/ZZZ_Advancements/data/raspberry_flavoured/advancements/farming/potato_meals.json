@@ -1,0 +1,281 @@
+{
+  "parent": "raspberry_flavoured:farming/all_flavors",
+  "criteria": {
+    "Obtain Baked Potato": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:baked_potato"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Truffle Mash": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "environmental:truffle_mash"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Turkey Stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kubejs:turkey_stew"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Baked Cod Stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:baked_cod_stew"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Scarlet Pierogi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "brewinandchewin:scarlet_pierogies"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Stuffed Pumpkin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:stuffed_pumpkin_block"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Fiery Fondue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "brewinandchewin:fiery_fondue_pot"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Vodka": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "brewinandchewin:vodka"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Strongroot Ale": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "brewinandchewin:strongroot_ale"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Sausage and Potatoes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mynethersdelight:sausage_and_potatoes"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Stuffed Potato": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:stuffed_potato"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Steak and Potatoes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:steak_and_potatoes"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Roast Chicken": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:roast_chicken_block"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Shepherd's Pie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersdelight:shepherds_pie_block"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Fried Potatoes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cookscollection:fried_potato"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Fish and Chips": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cookscollection:fish_and_chips"
+            ]
+          }
+        ]
+      }
+    },
+	"Obtain Fried Potatoes with Chili": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kubejs:fried_potato_with_chili"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.rf.farming.potato_meals.title"
+    },
+    "description": {
+      "color": "#C44E00",
+      "translate": "advancements.rf.farming.potato_meals.description"
+    },
+    "icon": {
+      "item": "minecraft:baked_potato"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "announce_to_chat": true,
+    "show_toast": true
+  },
+  "rewards": {
+      "function": "raspberry_flavoured:sound_joke"
+    },
+  "requirements": [
+    [
+	"Obtain Baked Potato"
+	],
+	[
+	"Obtain Truffle Mash"
+	],
+	[
+	"Obtain Turkey Stew"
+	],
+	[
+	"Obtain Baked Cod Stew"
+	],
+	[
+	"Obtain Scarlet Pierogi"
+	],
+	[
+	"Obtain Stuffed Pumpkin"
+	],
+	[
+	"Obtain Fiery Fondue"
+	],
+	[
+	"Obtain Vodka"
+	],
+	[
+	"Obtain Strongroot Ale"
+	],
+	[
+	"Obtain Sausage and Potatoes"
+	],
+	[
+	"Obtain Stuffed Potato"
+	],
+	[
+	"Obtain Steak and Potatoes"
+	],
+	[
+	"Obtain Roast Chicken"
+	],
+	[
+	"Obtain Shepherd's Pie"
+	],
+	[
+	"Obtain Fried Potatoes"
+	],
+	[
+	"Obtain Fish and Chips"
+	],
+	[
+	"Obtain Fried Potatoes with Chili"
+	]
+  ]
+}

@@ -1,0 +1,210 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.OptionsScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  custom_menu_title = 
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=505154%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = 105
+  action = movebutton
+  y = -154
+}
+
+customization {
+  identifier = %id=345232%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = -55
+  action = movebutton
+  y = -128
+}
+
+customization {
+  identifier = %id=345280%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = 0
+  action = movebutton
+  y = -71
+}
+
+customization {
+  identifier = %id=345280%
+  width = 200
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=345154%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = -55
+  action = movebutton
+  y = -154
+}
+
+customization {
+  identifier = %id=505232%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = 0
+  action = movebutton
+  y = -97
+}
+
+customization {
+  identifier = %id=505232%
+  width = 200
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=505280%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=505280%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = -55
+  action = movebutton
+  y = -49
+}
+
+customization {
+  identifier = %id=400334%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = 77
+}
+
+customization {
+  identifier = %id=635154%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = 236
+  action = movebutton
+  y = -154
+}
+
+customization {
+  identifier = %id=345208%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=345208%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = -55
+  action = movebutton
+  y = -74
+}
+
+customization {
+  identifier = %id=345256%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=345256%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = -55
+  action = movebutton
+  y = -50
+}
+
+customization {
+  identifier = %id=505208%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = 106
+  action = movebutton
+  y = -128
+}
+
+customization {
+  identifier = %id=505256%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=505256%
+  orientation = element
+  orientation_element = vanillabtn:400334
+  x = 105
+  action = movebutton
+  y = -74
+}
+
+customization {
+  orientation = top-centered
+  enable_scrolling = false
+  shadow = true
+  scale = 1.0
+  source = Settings Menu
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -320
+  width = 200
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = fc4823c3-bd6e-4153-bc52-cf1bdf1f4ae41688232587067
+  y = -186
+  alignment = centered
+  height = 179
+}
+
+customization {
+  orientation = top-centered
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Settings
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -100
+  width = 200
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 8b84acc0-60ec-4bdc-a70b-2f4a70da68521713555956763
+  y = 21
+  alignment = centered
+  height = 14
+}
+
+customization {
+  orientation = element
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  orientation_element = vanillabtn:400334
+  buttonaction = opencustomgui;rfmoresettings%btnaction_splitter_fm%
+  x = 0
+  width = 200
+  action = addbutton
+  actionid = 2853c624-0646-474f-8cf9-b2fbfdbd41e61713556086922
+  y = -45
+  label = More Settings...
+  height = 20
+}
+

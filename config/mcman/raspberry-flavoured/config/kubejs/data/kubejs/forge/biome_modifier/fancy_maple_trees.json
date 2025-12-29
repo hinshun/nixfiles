@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#raspberry_flavoured:fancy_maple_biomes",
+  "features": [
+    "kubejs:fancy_green_maple",
+    "kubejs:fancy_yellow_maple",
+    "kubejs:fancy_orange_maple",
+    "kubejs:fancy_red_maple"
+  ],
+  "step": "vegetal_decoration"
+}

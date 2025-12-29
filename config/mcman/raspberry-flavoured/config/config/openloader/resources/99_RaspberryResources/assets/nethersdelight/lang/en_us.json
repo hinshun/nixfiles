@@ -1,0 +1,11 @@
+{
+  "block.nethersdelight.blackstone_stove": "Blackstove",
+  "block.nethersdelight.blackstone_furnace": "Brick Furnace",
+  "item.nethersdelight.hoglin_loin": "Raw Hogchop",
+  "item.nethersdelight.hoglin_sirloin": "Cooked Hogchop",
+  "item.nethersdelight.propelpearl": "Lightspores",
+  "nethersdelight.container.blackstone_blast_furnace": "Blast Furnace",
+  "nethersdelight.container.blackstone_furnace": "Furnace",
+  "nethersdelight.container.nether_brick_smoker": "Smoker",
+  "nethersdelight.block.feast.use_knife": "You need a Knife to cut this."
+}

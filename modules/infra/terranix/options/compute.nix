@@ -165,6 +165,11 @@ in {
       (_: inst: inst.nixos-anywhere.enable)
       enabledInstances;
 
+    # Instances with agenix key provisioning enabled
+    agenixInstances = filterAttrs
+      (_: inst: inst.nixos-anywhere.enable && inst.nixos-anywhere.agenix.enable)
+      enabledInstances;
+
     # Instances with colmena deployment enabled
     colmenaInstances = filterAttrs
       (_: inst: inst.colmena.enable)
@@ -192,7 +197,7 @@ in {
     } // inst.hcloud) hcloudInstances;
 
     # Generate nixos-anywhere provisioners
-    resource.null_resource = mapAttrs (name: inst: {
+    resource.null_resource = (mapAttrs (name: inst: {
       depends_on = [ (getServerDep inst._resolved.shape.cloud name) ];
 
       triggers = {
@@ -211,7 +216,60 @@ in {
           "${inst.nixos-anywhere.sshUser}@${getServerIpRef inst._resolved.shape.cloud name}"
         ]);
       };
-    }) nixosAnywhereInstances;
+    }) nixosAnywhereInstances)
+    # Generate agenix key directory provisioners
+    // (mapAttrs' (name: inst:
+      let
+        keyDest = inst.nixos-anywhere.agenix.keyDestination;
+        keyDir = dirOf keyDest;
+      in nameValuePair "${name}_agenix_dir" {
+        depends_on = [ "null_resource.${name}" ];
+
+        triggers = {
+          server_id = "\${${getServerDep inst._resolved.shape.cloud name}.id}";
+        };
+
+        connection = {
+          type = "ssh";
+          user = inst.nixos-anywhere.sshUser;
+          host = getServerIpRef inst._resolved.shape.cloud name;
+        };
+
+        provisioner.remote-exec = {
+          inline = [
+            "mkdir -p ${keyDir}"
+            "chmod 700 ${keyDir}"
+          ];
+        };
+      }
+    ) agenixInstances)
+    # Generate agenix key file provisioners
+    // (mapAttrs' (name: inst:
+      let
+        keyDest = inst.nixos-anywhere.agenix.keyDestination;
+      in nameValuePair "${name}_agenix_key" {
+        depends_on = [ "null_resource.${name}_agenix_dir" ];
+
+        triggers = {
+          server_id = "\${${getServerDep inst._resolved.shape.cloud name}.id}";
+        };
+
+        connection = {
+          type = "ssh";
+          user = inst.nixos-anywhere.sshUser;
+          host = getServerIpRef inst._resolved.shape.cloud name;
+        };
+
+        provisioner.file = {
+          source = inst.nixos-anywhere.agenix.keySource;
+          destination = keyDest;
+        };
+
+        provisioner.remote-exec = {
+          inline = [ "chmod 400 ${keyDest}" ];
+        };
+      }
+    ) agenixInstances);
 
     # Generate outputs for instance IPs
     output = mapAttrs (name: inst: {

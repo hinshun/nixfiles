@@ -1,0 +1,1001 @@
+name = "Raspberry Flavoured"
+mc_version = "1.19.2"
+
+[jar]
+type = "forge"
+loader = "43.5.1"
+
+[variables]
+SERVER_PORT = "25565"
+
+[launcher]
+eula_args = true
+nogui = true
+
+[markdown]
+files = ["README.md"]
+auto_update = false
+
+[options]
+success_line = ""
+stop_command = ""
+
+[[mods]]
+type = "modrinth"
+id = "ts3qjo5t"
+version = "u2H47I5t"
+
+[[mods]]
+type = "modrinth"
+id = "SvXrP8rT"
+version = "M5c0LFrD"
+
+[[mods]]
+type = "modrinth"
+id = "R4TvILfj"
+version = "Et0munWe"
+
+[[mods]]
+type = "modrinth"
+id = "TLbWK3hE"
+version = "4Gl9RwGf"
+
+[[mods]]
+type = "modrinth"
+id = "eIO12l2t"
+version = "O9J4Ktag"
+
+[[mods]]
+type = "modrinth"
+id = "r0v8vy1s"
+version = "v9lKbHW6"
+
+[[mods]]
+type = "modrinth"
+id = "fM515JnW"
+version = "yNFnf8du"
+
+[[mods]]
+type = "modrinth"
+id = "wXiGiyGX"
+version = "sB14azEN"
+
+[[mods]]
+type = "modrinth"
+id = "ulloLmqG"
+version = "b6EO57JG"
+
+[[mods]]
+type = "modrinth"
+id = "fvtFPg1k"
+version = "KjIyu2yU"
+
+[[mods]]
+type = "modrinth"
+id = "EsAfCjCV"
+version = "YRzksfaH"
+
+[[mods]]
+type = "modrinth"
+id = "U9GJqWrI"
+version = "3tKHgUoC"
+
+[[mods]]
+type = "curseforge"
+id = "60028"
+version = "5320128"
+
+[[mods]]
+type = "modrinth"
+id = "vt0VyseM"
+version = "3NNRjDeC"
+
+[[mods]]
+type = "modrinth"
+id = "lhGA9TYQ"
+version = "96L7fC9l"
+
+[[mods]]
+type = "modrinth"
+id = "PFwYNrHb"
+version = "DTfzy58C"
+
+[[mods]]
+type = "modrinth"
+id = "U9sJOFmJ"
+version = "vEIX2xn5"
+
+[[mods]]
+type = "curseforge"
+id = "636199"
+version = "4518954"
+
+[[mods]]
+type = "modrinth"
+id = "NvZ9ZhwE"
+version = "pwEa2yJ2"
+
+[[mods]]
+type = "modrinth"
+id = "cRh6MJ6n"
+version = "zukiG2Xb"
+
+[[mods]]
+type = "modrinth"
+id = "g96Z4WVZ"
+version = "iULB5JCQ"
+
+[[mods]]
+type = "curseforge"
+id = "628678"
+version = "4550452"
+
+[[mods]]
+type = "modrinth"
+id = "MBAkmtvl"
+version = "d7a0S3hj"
+
+[[mods]]
+type = "curseforge"
+id = "537746"
+version = "4560410"
+
+[[mods]]
+type = "modrinth"
+id = "vNNL5mc7"
+version = "nFsnpwRv"
+
+[[mods]]
+type = "curseforge"
+id = "355589"
+version = "4023072"
+
+[[mods]]
+type = "modrinth"
+id = "rLUWhirj"
+version = "ne5tUDjj"
+
+[[mods]]
+type = "modrinth"
+id = "ZucWZEBV"
+version = "XB1ghJZJ"
+
+[[mods]]
+type = "modrinth"
+id = "KJhXPbHQ"
+version = "SIqdR1UJ"
+
+[[mods]]
+type = "curseforge"
+id = "551520"
+version = "5100224"
+
+[[mods]]
+type = "modrinth"
+id = "f9kXyjJX"
+version = "rJePYaQ0"
+
+[[mods]]
+type = "modrinth"
+id = "VsM5EDoI"
+version = "SnLXbWe9"
+
+[[mods]]
+type = "modrinth"
+id = "hevpK888"
+version = "DDO9WQES"
+
+[[mods]]
+type = "modrinth"
+id = "hIu9KJTT"
+version = "gj3ERfxM"
+
+[[mods]]
+type = "modrinth"
+id = "b7vOFSIp"
+version = "d9WQBnra"
+
+[[mods]]
+type = "curseforge"
+id = "978666"
+version = "5218143"
+
+[[mods]]
+type = "modrinth"
+id = "tfjmPSbI"
+version = "TuFWVSZM"
+
+[[mods]]
+type = "curseforge"
+id = "921066"
+version = "4834935"
+
+[[mods]]
+type = "modrinth"
+id = "YWGP4Y1d"
+version = "fvS0q7eV"
+
+[[mods]]
+type = "curseforge"
+id = "831663"
+version = "4894788"
+
+[[mods]]
+type = "curseforge"
+id = "331936"
+version = "4556677"
+
+[[mods]]
+type = "curseforge"
+id = "468706"
+version = "5094213"
+
+[[mods]]
+type = "modrinth"
+id = "1iicrEO3"
+version = "Skc3zBzk"
+
+[[mods]]
+type = "curseforge"
+id = "888790"
+version = "4647483"
+
+[[mods]]
+type = "modrinth"
+id = "9s6osm5g"
+version = "o6AGzycg"
+
+[[mods]]
+type = "modrinth"
+id = "qRogT5Gy"
+version = "8143nK1O"
+
+[[mods]]
+type = "modrinth"
+id = "OWSRM4vD"
+version = "ssRHxD6e"
+
+[[mods]]
+type = "modrinth"
+id = "lOZBoyio"
+version = "rbf5I3X0"
+
+[[mods]]
+type = "modrinth"
+id = "1hn9SStW"
+version = "RHpQ5AEL"
+
+[[mods]]
+type = "curseforge"
+id = "457570"
+version = "4462837"
+
+[[mods]]
+type = "curseforge"
+id = "418514"
+version = "5202515"
+
+[[mods]]
+type = "modrinth"
+id = "QC7N8ljN"
+version = "UU4OM1Pv"
+
+[[mods]]
+type = "curseforge"
+id = "950738"
+version = "5083546"
+
+[[mods]]
+type = "curseforge"
+id = "567666"
+version = "3972600"
+
+[[mods]]
+type = "modrinth"
+id = "UT2M39wf"
+version = "CUtpx2H6"
+
+[[mods]]
+type = "modrinth"
+id = "KUInlTFo"
+version = "SFWaKYwq"
+
+[[mods]]
+type = "modrinth"
+id = "btq68HMO"
+version = "jkCiIZLr"
+
+[[mods]]
+type = "modrinth"
+id = "WPE5gRs9"
+version = "rLTtWIfx"
+
+[[mods]]
+type = "modrinth"
+id = "LNytGWDc"
+version = "tJVykywJ"
+
+[[mods]]
+type = "modrinth"
+id = "OsZiaDHq"
+version = "kwUXLQPI"
+
+[[mods]]
+type = "modrinth"
+id = "YttyNOFA"
+version = "XrC6CWwf"
+
+[[mods]]
+type = "curseforge"
+id = "326652"
+version = "5170313"
+
+[[mods]]
+type = "modrinth"
+id = "vvuO3ImH"
+version = "S9Xq7LzJ"
+
+[[mods]]
+type = "curseforge"
+id = "818759"
+version = "4431062"
+
+[[mods]]
+type = "modrinth"
+id = "WNdd2blX"
+version = "KCMrvAXI"
+
+[[mods]]
+type = "curseforge"
+id = "857498"
+version = "4995128"
+
+[[mods]]
+type = "curseforge"
+id = "993840"
+version = "5263480"
+
+[[mods]]
+type = "modrinth"
+id = "h5JyLdjM"
+version = "FQhDA1rS"
+
+[[mods]]
+type = "curseforge"
+id = "550941"
+version = "5112044"
+
+[[mods]]
+type = "curseforge"
+id = "428883"
+version = "4501524"
+
+[[mods]]
+type = "modrinth"
+id = "gA5euN8S"
+version = "5tmX635q"
+
+[[mods]]
+type = "modrinth"
+id = "J6DHXVYc"
+version = "iUQLLA08"
+
+[[mods]]
+type = "modrinth"
+id = "m3pkVbY8"
+version = "T0Ez2ktf"
+
+[[mods]]
+type = "modrinth"
+id = "NCKpPR0Z"
+version = "hOFm4e6B"
+
+[[mods]]
+type = "modrinth"
+id = "fRiHVvU7"
+version = "arXvHNCO"
+
+[[mods]]
+type = "curseforge"
+id = "919380"
+version = "4787145"
+
+[[mods]]
+type = "modrinth"
+id = "cPle5Z8G"
+version = "VDTdGjUK"
+
+[[mods]]
+type = "modrinth"
+id = "ImlP9deQ"
+version = "Ukg0Uxoo"
+
+[[mods]]
+type = "modrinth"
+id = "OvPZ16yX"
+version = "1DTiQBdR"
+
+[[mods]]
+type = "modrinth"
+id = "OqtiAZcV"
+version = "Yuxp2AA2"
+
+[[mods]]
+type = "curseforge"
+id = "491890"
+version = "5060422"
+
+[[mods]]
+type = "modrinth"
+id = "eiktJyw1"
+version = "xUCsILcc"
+
+[[mods]]
+type = "modrinth"
+id = "HSfsxuTo"
+version = "ovtuGAG4"
+
+[[mods]]
+type = "modrinth"
+id = "r0camchr"
+version = "odfOCVAp"
+
+[[mods]]
+type = "modrinth"
+id = "hB899VmG"
+version = "nCcagXCN"
+
+[[mods]]
+type = "modrinth"
+id = "R2OftAxM"
+version = "rFTKVUtq"
+
+[[mods]]
+type = "curseforge"
+id = "551453"
+version = "4081312"
+
+[[mods]]
+type = "modrinth"
+id = "z3TzcquW"
+version = "6yTegMt6"
+
+[[mods]]
+type = "curseforge"
+id = "904186"
+version = "4711107"
+
+[[mods]]
+type = "curseforge"
+id = "835105"
+version = "4632828"
+
+[[mods]]
+type = "modrinth"
+id = "uXXizFIs"
+version = "CtXsUUz6"
+
+[[mods]]
+type = "curseforge"
+id = "882495"
+version = "4621015"
+
+[[mods]]
+type = "curseforge"
+id = "434087"
+version = "5359050"
+
+[[mods]]
+type = "modrinth"
+id = "597XsRkb"
+version = "fjkJvasy"
+
+[[mods]]
+type = "modrinth"
+id = "BOCJKD49"
+version = "U6qMaRUn"
+
+[[mods]]
+type = "modrinth"
+id = "8BmcQJ2H"
+version = "lxzmD9V4"
+
+[[mods]]
+type = "modrinth"
+id = "d47NdDkH"
+version = "VF0bzh6B"
+
+[[mods]]
+type = "modrinth"
+id = "XiC6HzoU"
+version = "CjFIpNvl"
+
+[[mods]]
+type = "curseforge"
+id = "420735"
+version = "4011213"
+
+[[mods]]
+type = "modrinth"
+id = "XCIMrYn0"
+version = "uLjyZrQk"
+
+[[mods]]
+type = "modrinth"
+id = "NBY6AFje"
+version = "m2NRankd"
+
+[[mods]]
+type = "modrinth"
+id = "Vj70oKlA"
+version = "sVfoVB5Y"
+
+[[mods]]
+type = "modrinth"
+id = "1ZqmoFFP"
+version = "ZMHn5FFd"
+
+[[mods]]
+type = "modrinth"
+id = "rJA65pFi"
+version = "1axJGTsZ"
+
+[[mods]]
+type = "modrinth"
+id = "KpICtuVx"
+version = "NjPpClOo"
+
+[[mods]]
+type = "modrinth"
+id = "A4Xrv60A"
+version = "xNXbdthU"
+
+[[mods]]
+type = "modrinth"
+id = "3ESR84kR"
+version = "7wB98NiB"
+
+[[mods]]
+type = "modrinth"
+id = "nvQzSEkH"
+version = "kp0HjPre"
+
+[[mods]]
+type = "modrinth"
+id = "u6dRKJwZ"
+version = "Y1en3Fb4"
+
+[[mods]]
+type = "modrinth"
+id = "EO27GKs1"
+version = "dbK8LkEi"
+
+[[mods]]
+type = "modrinth"
+id = "J81TRJWm"
+version = "a4UZ7nGe"
+
+[[mods]]
+type = "modrinth"
+id = "ordsPcFz"
+version = "NBn3sEQk"
+
+[[mods]]
+type = "modrinth"
+id = "T38eAZQC"
+version = "Xe2y2pRp"
+
+[[mods]]
+type = "curseforge"
+id = "864875"
+version = "4651508"
+
+[[mods]]
+type = "modrinth"
+id = "umyGl7zF"
+version = "Sl2X7VIn"
+
+[[mods]]
+type = "curseforge"
+id = "460819"
+version = "4327266"
+
+[[mods]]
+type = "modrinth"
+id = "AVq17PqV"
+version = "6LsBcPWG"
+
+[[mods]]
+type = "curseforge"
+id = "973100"
+version = "5104922"
+
+[[mods]]
+type = "modrinth"
+id = "67kVxsaO"
+version = "D7tQvUmL"
+
+[[mods]]
+type = "modrinth"
+id = "9ON3zv6e"
+version = "zQ8u8Hcu"
+
+[[mods]]
+type = "curseforge"
+id = "990180"
+version = "5651891"
+
+[[mods]]
+type = "curseforge"
+id = "519759"
+version = "5138314"
+
+[[mods]]
+type = "curseforge"
+id = "492246"
+version = "4658481"
+
+[[mods]]
+type = "modrinth"
+id = "qMxbM4BQ"
+version = "FMTuVQAh"
+
+[[mods]]
+type = "modrinth"
+id = "Xu8V0UlK"
+version = "DAG6dnJS"
+
+[[mods]]
+type = "modrinth"
+id = "nmDcB62a"
+version = "Enb5QBS3"
+
+[[mods]]
+type = "modrinth"
+id = "xHskr2cS"
+version = "vNUfsP81"
+
+[[mods]]
+type = "modrinth"
+id = "5QcDoykP"
+version = "ocN9Q6Pf"
+
+[[mods]]
+type = "modrinth"
+id = "sUSfS0sK"
+version = "r7xgrkFU"
+
+[[mods]]
+type = "modrinth"
+id = "JiEhJ3WG"
+version = "uMKJZZE3"
+
+[[mods]]
+type = "modrinth"
+id = "mo64mR1W"
+version = "OPrF3dPN"
+
+[[mods]]
+type = "modrinth"
+id = "z7WhFkyW"
+version = "c1iV7XZi"
+
+[[mods]]
+type = "modrinth"
+id = "O53VhQoZ"
+version = "u8pJaV2E"
+
+[[mods]]
+type = "modrinth"
+id = "F8BQNPWX"
+version = "YjWRWE02"
+
+[[mods]]
+type = "modrinth"
+id = "InYMuiQt"
+version = "8qmVV9M7"
+
+[[mods]]
+type = "modrinth"
+id = "P1Kv5EAO"
+version = "txeRRjSH"
+
+[[mods]]
+type = "modrinth"
+id = "nPZr02ET"
+version = "kpXZdI4d"
+
+[[mods]]
+type = "modrinth"
+id = "Vv0RM7WN"
+version = "coysmu7U"
+
+[[mods]]
+type = "modrinth"
+id = "l1rj36Ob"
+version = "b1JTPMBr"
+
+[[mods]]
+type = "modrinth"
+id = "vC6rKlKN"
+version = "vMR6rlr2"
+
+[[mods]]
+type = "curseforge"
+id = "354339"
+version = "4745857"
+
+[[mods]]
+type = "modrinth"
+id = "2FJutzEL"
+version = "8mxk6Cye"
+
+[[mods]]
+type = "modrinth"
+id = "pRWPunvR"
+version = "I3sPinmk"
+
+[[mods]]
+type = "modrinth"
+id = "zrAMu1nt"
+version = "dpDeV1Xm"
+
+[[mods]]
+type = "modrinth"
+id = "iRE67WIn"
+version = "4dfnMaGj"
+
+[[mods]]
+type = "curseforge"
+id = "283644"
+version = "5180198"
+
+[[mods]]
+type = "modrinth"
+id = "I2K4u1Q7"
+version = "7JnXMAAf"
+
+[[mods]]
+type = "curseforge"
+id = "544350"
+version = "4685982"
+
+[[mods]]
+type = "modrinth"
+id = "2k6aLirX"
+version = "ghUuZufq"
+
+[[mods]]
+type = "curseforge"
+id = "787670"
+version = "4291702"
+
+[[mods]]
+type = "curseforge"
+id = "433068"
+version = "4291556"
+
+[[mods]]
+type = "modrinth"
+id = "IhZuHxkl"
+version = "Rt8Uv9mM"
+
+[[mods]]
+type = "curseforge"
+id = "474822"
+version = "4553718"
+
+[[mods]]
+type = "modrinth"
+id = "QAGBst4M"
+version = "UbCrBSit"
+
+[[mods]]
+type = "modrinth"
+id = "qeEEslrN"
+version = "gvWA7HWA"
+
+[[mods]]
+type = "modrinth"
+id = "qnQsVE2z"
+version = "8po5DGR8"
+
+[[mods]]
+type = "modrinth"
+id = "1dE2nxJB"
+version = "lYV0yZGU"
+
+[[mods]]
+type = "curseforge"
+id = "907856"
+version = "5541098"
+
+[[mods]]
+type = "modrinth"
+id = "nzRWPE5v"
+version = "vnotZ9tN"
+
+[[mods]]
+type = "modrinth"
+id = "Df7RucLK"
+version = "NpcBHs0g"
+
+[[mods]]
+type = "modrinth"
+id = "MBmh0f9A"
+version = "6vuwab6O"
+
+[[mods]]
+type = "modrinth"
+id = "sk9knFPE"
+version = "6m33q64a"
+
+[[mods]]
+type = "curseforge"
+id = "529754"
+version = "5255159"
+
+[[mods]]
+type = "modrinth"
+id = "2eT495vq"
+version = "np1EcSVx"
+
+[[mods]]
+type = "modrinth"
+id = "KxOh9voD"
+version = "7rAIMpD7"
+
+[[mods]]
+type = "curseforge"
+id = "1408019"
+version = "7349109"
+
+[[mods]]
+type = "curseforge"
+id = "509239"
+version = "3925822"
+
+[[mods]]
+type = "curseforge"
+id = "499980"
+version = "4983974"
+
+[[mods]]
+type = "modrinth"
+id = "xEu0FTVG"
+version = "W2N7jwBk"
+
+[[mods]]
+type = "modrinth"
+id = "sjxWxSao"
+version = "dEY11Uda"
+
+[[mods]]
+type = "curseforge"
+id = "582327"
+version = "4876162"
+
+[[mods]]
+type = "modrinth"
+id = "Q3vyMuj2"
+version = "qsdWlJlR"
+
+[[mods]]
+type = "modrinth"
+id = "krskFMfA"
+version = "v6sHcul7"
+
+[[mods]]
+type = "modrinth"
+id = "iRfIGC1s"
+version = "eUgPCLKt"
+
+[[mods]]
+type = "modrinth"
+id = "boFjx9eY"
+version = "GRs8dpYU"
+
+[[mods]]
+type = "modrinth"
+id = "guitPqEi"
+version = "rUXcd0Oi"
+
+[[mods]]
+type = "curseforge"
+id = "832882"
+version = "4882269"
+
+[[mods]]
+type = "modrinth"
+id = "vOm0vWW8"
+version = "M9vlsNJe"
+
+[[mods]]
+type = "modrinth"
+id = "LN9BxssP"
+version = "HHm0Di8Y"
+
+[[mods]]
+type = "curseforge"
+id = "838411"
+version = "4547170"
+
+[[mods]]
+type = "modrinth"
+id = "fFEIiSDQ"
+version = "UQu29fD5"
+
+[[mods]]
+type = "modrinth"
+id = "Q9ZA0ul7"
+version = "qsWFuGRr"
+
+[[mods]]
+type = "modrinth"
+id = "5kRS9LYk"
+version = "g5xGoydC"
+
+[[mods]]
+type = "curseforge"
+id = "271740"
+version = "4028343"
+
+[[mods]]
+type = "modrinth"
+id = "XZNI4Cpy"
+version = "Xoa4RYRL"
+
+[[mods]]
+type = "modrinth"
+id = "4im8hCxA"
+version = "S2Yqxmo6"
+
+[[mods]]
+type = "modrinth"
+id = "RG50cUrX"
+version = "3vp46egv"
+
+[[mods]]
+type = "modrinth"
+id = "66VIiT1y"
+version = "uuvhNgzJ"
+
+[[mods]]
+type = "modrinth"
+id = "gTuTFFyz"
+version = "W50xMJpW"
+
+[[mods]]
+type = "modrinth"
+id = "l0h5MtkA"
+version = "FFxnfxsM"
+
+[[mods]]
+type = "modrinth"
+id = "rv1sovni"
+version = "prgM2znB"
+
+[[mods]]
+type = "modrinth"
+id = "Ua7DFN59"
+version = "L5GqhLVE"
+
+[[mods]]
+type = "modrinth"
+id = "o1C1Dkj5"
+version = "vhbhPrpZ"
+
+[[mods]]
+type = "modrinth"
+id = "HjmxVlSr"
+version = "K4G8SGWy"
+
+[[mods]]
+type = "modrinth"
+id = "t5FRdP87"
+version = "rAwSL8Wn"
+
+[[mods]]
+type = "modrinth"
+id = "ZYgyPyfq"
+version = "Ltax470w"

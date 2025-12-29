@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "minecraft:flower_forest",
+  "spawners": [
+    {
+      "type": "minecraft:allay",
+      "maxCount": 16,
+      "minCount": 12,
+      "weight": 10
+    }
+  ]
+}

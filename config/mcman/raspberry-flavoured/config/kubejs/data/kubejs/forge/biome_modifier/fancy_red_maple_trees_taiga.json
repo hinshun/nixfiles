@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_taiga",
+  "features": "kubejs:fancy_red_maple_taiga",
+  "step": "vegetal_decoration"
+}

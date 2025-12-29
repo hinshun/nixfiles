@@ -1,0 +1,14 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "brewinandchewin:scarlet_cheese_wedge"
+    }
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "fluid": "kubejs:scarlet_cheese"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "tag": "raspberry_flavoured:aquarium_fish"
+    },
+    {
+      "tag": "raspberry_flavoured:aquarium_fish"
+    }
+  ],
+  "result": {
+    "item": "culturaldelights:tropical_roll",
+    "count": 2
+  }
+}

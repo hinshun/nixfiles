@@ -1,0 +1,27 @@
+{
+	"type": "miners_delight:replace_items",
+	"conditions": [
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "minecraft:gameplay/fishing"
+		},
+        {
+			"condition": "minecraft:location_check",
+            "predicate": {
+                "position": {
+                   "y": {
+                     "max": 16.0,
+                     "min": -57.0
+                   }
+                }
+            }
+        },
+		{
+			"condition": "minecraft:random_chance",
+			"chance" : 0
+		},
+	],
+	"item": "miners_delight:glow_squid",
+	"min": 1,
+	"max": 1
+}

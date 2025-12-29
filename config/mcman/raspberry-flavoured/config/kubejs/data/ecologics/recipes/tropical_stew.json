@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "ecologics:coconut_slice"
+  },
+  "cookingtime": 200,
+  "experience": 0,
+  "ingredients": [
+    {
+      "tag": "raspberry_flavoured:raw_crab_meat"
+    },
+    {
+      "tag": "forge:vegetables"
+    },
+    {
+      "tag": "forge:vegetables"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "ecologics:tropical_stew"
+  }
+}

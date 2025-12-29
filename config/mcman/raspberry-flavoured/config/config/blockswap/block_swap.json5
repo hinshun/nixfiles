@@ -1,0 +1,454 @@
+/*
+This file uses the ".json5" file extension which allows for comments like this in a json file!
+Your text editor may show this file with invalid/no syntax, if so, we recommend you download:
+
+VSCode: https://code.visualstudio.com/
+JSON5 plugin(for VSCode): https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-json5
+
+to make editing this file much easier.
+*/
+{
+	// Generates all block states for all blocks in the registry.
+	"generate_all_known_states": false,
+	// Whether blocks are replaced in existing chunks.
+	"retro_gen": true,
+	/* A map of states that specifies what the "old" block state is and what its "new" block state is.
+	   See "known_states" folder("generate_all_known_states" must be set to true in this config) to see all known block states available for all blocks available in the registry.
+	   Example:
+	    "state_swapper": [
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:birch_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "x"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:oak_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:birch_leaves",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"distance": "7",
+	    				"persistent": "true"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:acacia_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:jungle_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "x"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:birch_log",
+	    			// Properties define the state of this block/fluid.
+	    			"Properties": {
+	    				"axis": "z"
+	    			}
+	    		}
+	    	},
+	    	{
+	    		"new": {
+	    			"Name": "minecraft:jungle_planks",
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:acacia_planks",
+	    			}
+	    		}
+	    	}
+	    ]
+	*/
+	"state_swapper": [
+			{
+	    		"new": {
+	    			"Name": "mynethersdelight:bullet_pepper",
+	    			"Properties": {
+	    				"age": "0"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:nether_wart",
+	    			"Properties": {
+	    				"age": "0"
+	    			}
+	    		}
+	    	},
+			{
+	    		"new": {
+	    			"Name": "mynethersdelight:bullet_pepper",
+	    			"Properties": {
+	    				"age": "1"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:nether_wart",
+	    			"Properties": {
+	    				"age": "1"
+	    			}
+	    		}
+	    	},
+			{
+	    		"new": {
+	    			"Name": "mynethersdelight:bullet_pepper",
+	    			"Properties": {
+	    				"age": "2"
+	    			}
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:nether_wart",
+	    			"Properties": {
+	    				"age": "2"
+	    			}
+	    		}
+	    	},
+			{
+	    		"new": {
+	    			"Name": "mynethersdelight:powdery_chubby_sapling"
+	    		},
+	    		"old": {
+	    			"Name": "minecraft:nether_wart",
+	    			"Properties": {
+	    				"age": "3"
+	    			}
+	    		}
+	    	},
+			{
+	    		"new": {
+	    			"Name": "farmersdelight:sandy_shrub"
+	    		},
+	    		"old": {
+	    			"Name": "upgrade_aquatic:tall_beachgrass",
+	    			"Properties": {
+	    				"half": "lower"
+	    			}
+	    		}
+	    	},
+			{
+	    		"new": {
+	    			"Name": "minecraft:air"
+	    		},
+	    		"old": {
+	    			"Name": "upgrade_aquatic:tall_beachgrass",
+	    			"Properties": {
+	    				"half": "upper"
+	    			}
+	    		}
+	    	}
+	],
+	/* A map of blocks that specifies what the "old" block is and what its "new" block is.
+	   Example:
+	   	"swapper": {
+	   		"minecraft:coarse_dirt": "minecraft:dirt",
+	   		"minecraft:diamond_block": "minecraft:emerald_block"
+	   	}
+	*/
+	"swapper": {
+	   		"farmersdelight:rope": "supplementaries:rope",
+	   		"upgrade_aquatic:beachgrass": "farmersdelight:sandy_shrub",
+	   		"mynethersdelight:letios_compost": "farmersdelight:organic_compost",
+	   		"mynethersdelight:resurgent_soil": "farmersdelight:rich_soil",
+	   		"mynethersdelight:resurgent_soil_farmland": "farmersdelight:rich_soil_farmland",
+	   		"mynethersdelight:crimson_fungus_colony": "nethersdelight:crimson_fungus_colony",
+	   		"mynethersdelight:warped_fungus_colony": "nethersdelight:warped_fungus_colony",
+			"windswept:wild_berry_bush_pips": "berry_good:sweet_berry_bush_pips",
+			"windswept:wild_berry_bush": "minecraft:sweet_berry_bush",
+			"windswept:holly_log": "minecraft:spruce_log",
+			"windswept:holly_wood": "minecraft:spruce_wood",
+			"windswept:stripped_holly_log": "minecraft:stripped_spruce_log",
+			"windswept:stripped_holly_wood": "minecraft:stripped_spruce_wood",
+			"windswept:holly_planks": "minecraft:spruce_planks",
+			"windswept:holly_slab": "minecraft:spruce_slab",
+			"windswept:holly_stairs": "minecraft:spruce_stairs",
+			"windswept:holly_fence": "minecraft:spruce_fence",
+			"windswept:holly_fence_gate": "minecraft:spruce_fence_gate",
+			"windswept:holly_bookshelf": "woodworks:spruce_bookshelf",
+			"windswept:holly_door": "minecraft:spruce_door",
+			"windswept:holly_trapdoor": "minecraft:spruce_trapdoor",
+			"windswept:holly_button": "minecraft:spruce_button",
+			"windswept:holly_pressure_plate": "minecraft:spruce_pressure_plate",
+			"windswept:holly_sapling": "minecraft:spruce_sapling",
+			"windswept:holly_leaves": "minecraft:spruce_leaves",
+			"windswept:holly_hedge": "quark:spruce_hedge",
+			"windswept:holly_leaf_pile": "woodworks:spruce_leaf_pile",
+			"ecologics:flowering_azalea_log": "ecologics:azalea_log",
+			"miners_delight:gossypium": "miners_delight:wild_cave_carrots",
+			"brewinandchewin:unripe_flaxen_cheese_wheel": "brewinandchewin:flaxen_cheese_wheel",
+			"brewinandchewin:unripe_scarlet_cheese_wheel": "brewinandchewin:scarlet_cheese_wheel",
+			"spelunkery:raw_nephrite": "minecraft:sculk",
+			"spelunkery:nephrite": "minecraft:sculk",
+			"minecraft:lapis_ore": "spelunkery:rough_lazurite_block",
+			"minecraft:deepslate_lapis_ore": "spelunkery:rough_lazurite_block",
+			"spelunkery:calcite_redstone_ore": "minecraft:redstone_ore",
+			"spelunkery:sandstone_lapis_ore": "spelunkery:rough_lazurite_block",
+			"spelunkery:andesite_emerald_ore": "minecraft:stone",
+			"spelunkery:smooth_basalt_diamond_ore": "minecraft:deepslate_diamond_ore",
+			"spelunkery:granite_coal_ore": "minecraft:coal_ore",
+			"spelunkery:andesite_coal_ore": "minecraft:coal_ore",
+			"spelunkery:diorite_coal_ore": "minecraft:coal_ore",
+			"spelunkery:tuff_coal_ore": "minecraft:deepslate_coal_ore",
+			"spelunkery:granite_iron_ore": "minecraft:iron_ore",
+			"spelunkery:andesite_iron_ore": "minecraft:iron_ore",
+			"spelunkery:diorite_iron_ore": "minecraft:iron_ore",
+			"spelunkery:tuff_iron_ore": "minecraft:deepslate_iron_ore",
+			"spelunkery:granite_copper_ore": "minecraft:copper_ore",
+			"spelunkery:andesite_copper_ore": "minecraft:copper_ore",
+			"spelunkery:diorite_copper_ore": "minecraft:copper_ore",
+			"spelunkery:tuff_copper_ore": "minecraft:deepslate_copper_ore",
+			"spelunkery:andesite_gold_ore": "minecraft:gold_ore",
+			"spelunkery:granite_gold_ore": "minecraft:gold_ore",
+			"spelunkery:diorite_gold_ore": "minecraft:gold_ore",
+			"spelunkery:tuff_gold_ore": "minecraft:deepslate_gold_ore",
+			"spelunkery:granite_redstone_ore": "minecraft:redstone_ore",
+			"spelunkery:andesite_redstone_ore": "minecraft:redstone_ore",
+			"spelunkery:diorite_redstone_ore": "minecraft:redstone_ore",
+			"spelunkery:tuff_redstone_ore": "minecraft:deepslate_redstone_ore",
+			"spelunkery:granite_lapis_ore": "spelunkery:rough_lazurite_block",
+			"spelunkery:andesite_lapis_ore": "spelunkery:rough_lazurite_block",
+			"spelunkery:diorite_lapis_ore": "spelunkery:rough_lazurite_block",
+			"spelunkery:tuff_lapis_ore": "spelunkery:rough_lazurite_block",
+			"spelunkery:granite_emerald_ore": "minecraft:diamond_ore",
+			"spelunkery:diorite_emerald_ore": "minecraft:diamond_ore",
+			"spelunkery:tuff_emerald_ore": "minecraft:deepslate_diamond_ore",
+			"spelunkery:granite_diamond_ore": "minecraft:diamond_ore",
+			"spelunkery:andesite_diamond_ore": "minecraft:diamond_ore",
+			"spelunkery:diorite_diamond_ore": "minecraft:diamond_ore",
+			"spelunkery:tuff_diamond_ore": "minecraft:deepslate_diamond_ore",
+			"spelunkery:granite_zinc_ore": "create:zinc_ore",
+			"spelunkery:andesite_zinc_ore": "create:zinc_ore",
+			"spelunkery:diorite_zinc_ore": "create:zinc_ore",
+			"spelunkery:tuff_zinc_ore": "create:deepslate_zinc_ore",
+			"spelunkery:granite_lead_ore": "kubejs:lead_ore",
+			"spelunkery:diorite_lead_ore": "kubejs:lead_ore",
+			"spelunkery:andesite_lead_ore": "kubejs:lead_ore",
+			"spelunkery:tuff_lead_ore": "oreganized:deepslate_lead_ore",
+			"spelunkery:granite_silver_ore": "oreganized:silver_ore",
+			"spelunkery:andesite_silver_ore": "oreganized:silver_ore",
+			"spelunkery:diorite_silver_ore": "oreganized:silver_ore",
+			"spelunkery:tuff_silver_ore": "oreganized:deepslate_silver_ore",
+			"minecraft:fletching_table": "minecraft:air",
+			"minecraft:emerald_ore": "minecraft:stone",
+			"minecraft:deepslate_emerald_ore": "minecraft:deepslate",
+			"windswept:bluebells": "environmental:bluebell",
+			"oreganized:lead_ore": "kubejs:lead_ore",
+			"twigs:schist": "minecraft:stone",
+			"twigs:rhyolite": "minecraft:deepslate",
+			"twigs:bronzed_seashell": "ecologics:seashell",
+			"twigs:opaline_seashell": "twigs:pebble",
+			"twigs:roseate_seashell": "twigs:pebble",
+			"twigs:tangerine_seashell": "twigs:pebble",
+			"twigs:azalea_flowers": "minecraft:air",
+			"neapolitan:adzuki_soil": "minecraft:grass_block",
+			"neapolitan:adzuki_sprouts": "minecraft:grass",
+			"minecraft:jukebox": "etched:album_jukebox",
+			"quark:shale": "oreganized:glance",
+			"quark:polished_shale": "oreganized:polished_glance",
+			"quark:shale_slab": "oreganized:glance_slab",
+			"quark:shale_stairs": "oreganized:glance_stairs",
+			"quark:polished_shale_slab": "oreganized:polished_glance_slab",
+			"quark:polished_shale_stairs": "oreganized:polished_glance_stairs",
+			"quark:shale_wall": "oreganized:glance_wall",
+			"oreganized:spotted_glance": "oreganized:glance",
+			"oreganized:waxed_spotted_glance": "oreganized:glance",
+			"spelunkery:portal_fluid": "minecraft:air",
+			"culturaldelights:avocado_log": "minecraft:jungle_log",
+			"culturaldelights:avocado_wood": "minecraft:jungle_wood",
+			"minecraft:lapis_block": "minecraft:emerald_block",
+			"architects_palette:twisted_leaves": "kubejs:choral_cap",
+			"atmospheric:passion_vine": "minecraft:vine",
+			"twigs:rocky_dirt": "caverns_and_chasms:rocky_dirt",
+			"caverns_and_chasms:azalea_log": "ecologics:azalea_log",
+			"create:copper_bars": "caverns_and_chasms:copper_bars",
+			"caverns_and_chasms:silver_ore": "minecraft:gold_ore",
+			"caverns_and_chasms:deepslate_silver_ore": "minecraft:deepslate_gold_ore",
+			"minecraft:end_portal_frame": "minecraft:air",
+			"minecraft:end_portal": "minecraft:air",
+			"supplementaries:lead_door": "supplementaries:netherite_door",
+			"supplementaries:lead_trapdoor": "supplementaries:netherite_trapdoor",
+			"copperized:copper_door": "copperandtuffbackport:copper_door",
+			"copperized:copper_trapdoor": "copperandtuffbackport:copper_trapdoor",
+			"copperized:exposed_copper_door": "copperandtuffbackport:exposed_copper_door",
+			"copperized:exposed_copper_trapdoor": "copperandtuffbackport:exposed_copper_trapdoor",
+			"copperized:weathered_copper_door": "copperandtuffbackport:weathered_copper_door",
+			"copperized:weathered_copper_trapdoor": "copperandtuffbackport:weathered_copper_trapdoor",
+			"copperized:oxidized_copper_door": "copperandtuffbackport:oxidized_copper_door",
+			"copperized:oxidized_copper_trapdoor": "copperandtuffbackport:oxidized_copper_trapdoor",
+			"copperized:waxed_copper_door": "copperandtuffbackport:waxed_copper_door",
+			"copperized:waxed_copper_trapdoor": "copperandtuffbackport:waxed_copper_trapdoor",
+			"copperized:waxed_exposed_copper_door": "copperandtuffbackport:waxed_exposed_copper_door",
+			"copperized:waxed_exposed_copper_trapdoor": "copperandtuffbackport:waxed_exposed_copper_trapdoor",
+			"copperized:waxed_weathered_copper_door": "copperandtuffbackport:waxed_weathered_copper_door",
+			"copperized:waxed_weathered_copper_trapdoor": "copperandtuffbackport:waxed_weathered_copper_trapdoor",
+			"copperized:waxed_oxidized_copper_door": "copperandtuffbackport:waxed_oxidized_copper_door",
+			"copperized:waxed_oxidized_copper_trapdoor": "copperandtuffbackport:waxed_oxidized_copper_trapdoor",
+			"twigs:copper_pillar": "kubejs:copper_pillar",
+			"twigs:exposed_copper_pillar": "kubejs:exposed_copper_pillar",
+			"twigs:weathered_copper_pillar": "kubejs:weathered_copper_pillar",
+			"twigs:oxidized_copper_pillar": "kubejs:oxidized_copper_pillar",
+			"twigs:waxed_copper_pillar": "kubejs:waxed_copper_pillar",
+			"twigs:waxed_exposed_copper_pillar": "kubejs:waxed_exposed_copper_pillar",
+			"twigs:waxed_weathered_copper_pillar": "kubejs:waxed_weathered_copper_pillar",
+			"twigs:waxed_oxidized_copper_pillar": "kubejs:waxed_oxidized_copper_pillar",
+			"spelunkery:rough_emerald_block": "minecraft:air",
+			"friendsandfoes:exposed_lightning_rod": "caverns_and_chasms:exposed_lightning_rod",
+			"friendsandfoes:weathered_lightning_rod": "caverns_and_chasms:weathered_lightning_rod",
+			"friendsandfoes:oxidized_lightning_rod": "caverns_and_chasms:oxidized_lightning_rod",
+			"friendsandfoes:waxed_lightning_rod": "caverns_and_chasms:waxed_lightning_rod",
+			"friendsandfoes:waxed_exposed_lightning_rod": "caverns_and_chasms:waxed_exposed_lightning_rod",
+			"friendsandfoes:waxed_weathered_lightning_rod": "caverns_and_chasms:waxed_weathered_lightning_rod",
+			"friendsandfoes:waxed_oxidized_lightning_rod": "caverns_and_chasms:waxed_oxidized_lightning_rod",
+			"quark:white_stool": "another_furniture:white_stool",
+			"create:rose_quartz_block": "minecraft:amethyst_block",
+			"create:small_rose_quartz_tiles": "sullysmod:polished_jade_shingles",
+			"alloyed:bronze_block": "kubejs:bronze_block",
+			"alloyed:exposed_bronze_block": "kubejs:bronze_block",
+			"alloyed:weathered_bronze_block": "kubejs:bronze_block",
+			"alloyed:oxidized_bronze_block": "kubejs:bronze_block",
+			"alloyed:waxed_bronze_block": "kubejs:bronze_block",
+			"alloyed:waxed_exposed_bronze_block": "kubejs:bronze_block",
+			"alloyed:waxed_weathered_bronze_block": "kubejs:bronze_block",
+			"alloyed:waxed_oxidized_bronze_block": "kubejs:bronze_block",
+			"cookscollection:salted_dripstone_block": "minecraft:dripstone_block",
+			"cookscollection:lemon_log": "minecraft:oak_log",
+			"cookscollection:lemon_wood": "minecraft:oak_wood",
+			"atmospheric:flowering_morado_leaf_pile": "atmospheric:morado_leaf_pile",
+			"atmospheric:flowering_morado_hedge": "atmospheric:morado_hedge",
+			"minecraft:cake": "raspberry:cake",
+			"neapolitan:vanilla_cake": "raspberry:vanilla_cake",
+			"neapolitan:chocolate_cake": "raspberry:chocolate_cake",
+			"neapolitan:strawberry_cake": "raspberry:strawberry_cake",
+			"neapolitan:banana_cake": "raspberry:banana_cake",
+			"neapolitan:mint_cake": "raspberry:mint_cake",
+			"neapolitan:adzuki_cake": "raspberry:cherry_cake",
+			"respiteful:green_tea_cake": "raspberry:green_tea_cake",
+			"respiteful:yellow_tea_cake": "raspberry:yellow_tea_cake",
+			"respiteful:black_tea_cake": "raspberry:black_tea_cake",
+			"farmersrespite:coffee_cake": "raspberry:coffee_cake",
+			"mynethersdelight:magma_cake": "raspberry:magma_cake",
+			"spelunkery:phosphor_fungus": "spelunkery:mushgloom",
+			"miningmaster:gem_forge": "modestmining:forge",
+			"minecraft:smoker": "minecraft:furnace",
+			"minecraft:blast_furnace": "minecraft:furnace",
+			"clayworks:kiln": "minecraft:furnace",
+			"nethersdelight:nether_brick_smoker": "quark:blackstone_furnace",
+			"nethersdelight:blackstone_blast_furnace": "quark:blackstone_furnace",
+			"atmospheric:aspen_log": "minecraft:birch_log",
+			"atmospheric:aspen_wood": "minecraft:birch_wood",
+			"atmospheric:stripped_aspen_log": "minecraft:stripped_birch_log",
+			"atmospheric:stripped_aspen_wood": "minecraft:stripped_birch_wood",
+			"atmospheric:watchful_aspen_log": "minecraft:birch_log",
+			"ecologics:walnut_log": "minecraft:birch_log",
+			"ecologics:walnut_wood": "minecraft:birch_wood",
+			"ecologics:stripped_walnut_log": "minecraft:stripped_birch_log",
+			"ecologics:stripped_walnut_wood": "minecraft:stripped_birch_wood",
+			"upgrade_aquatic:river_log": "minecraft:birch_log",
+			"upgrade_aquatic:river_wood": "minecraft:birch_wood",
+			"upgrade_aquatic:stripped_river_log": "minecraft:stripped_birch_log",
+			"upgrade_aquatic:stripped_river_wood": "minecraft:stripped_birch_wood",
+			"architects_palette:oak_boards": "modestmining:oak_boards",
+			"architects_palette:oak_board_slab": "modestmining:oak_board_slab",
+			"architects_palette:oak_board_stairs": "modestmining:oak_board_stairs",
+			"architects_palette:oak_board_wall": "modestmining:oak_board_wall",
+			"architects_palette:birch_boards": "modestmining:birch_boards",
+			"architects_palette:birch_board_slab": "modestmining:birch_board_slab",
+			"architects_palette:birch_board_stairs": "modestmining:birch_board_stairs",
+			"architects_palette:birch_board_wall": "modestmining:birch_board_wall",
+			"architects_palette:spruce_boards": "modestmining:spruce_boards",
+			"architects_palette:spruce_board_slab": "modestmining:spruce_board_slab",
+			"architects_palette:spruce_board_stairs": "modestmining:spruce_board_stairs",
+			"architects_palette:spruce_board_wall": "modestmining:spruce_board_wall",
+			"architects_palette:jungle_boards": "modestmining:jungle_boards",
+			"architects_palette:jungle_board_slab": "modestmining:jungle_board_slab",
+			"architects_palette:jungle_board_stairs": "modestmining:jungle_board_stairs",
+			"architects_palette:jungle_board_wall": "modestmining:jungle_board_wall",
+			"architects_palette:dark_oak_boards": "modestmining:dark_oak_boards",
+			"architects_palette:dark_oak_board_slab": "modestmining:dark_oak_board_slab",
+			"architects_palette:dark_oak_board_stairs": "modestmining:dark_oak_board_stairs",
+			"architects_palette:dark_oak_board_wall": "modestmining:dark_oak_board_wall",
+			"architects_palette:acacia_boards": "modestmining:acacia_boards",
+			"architects_palette:acacia_board_slab": "modestmining:acacia_board_slab",
+			"architects_palette:acacia_board_stairs": "modestmining:acacia_board_stairs",
+			"architects_palette:acacia_board_wall": "modestmining:acacia_board_wall",
+			"architects_palette:crimson_boards": "modestmining:crimson_boards",
+			"architects_palette:crimson_board_slab": "modestmining:crimson_board_slab",
+			"architects_palette:crimson_board_stairs": "modestmining:crimson_board_stairs",
+			"architects_palette:crimson_board_wall": "modestmining:crimson_board_wall",
+			"architects_palette:warped_boards": "modestmining:warped_boards",
+			"architects_palette:warped_board_slab": "modestmining:warped_board_slab",
+			"architects_palette:warped_board_stairs": "modestmining:warped_board_stairs",
+			"architects_palette:warped_board_wall": "modestmining:warped_board_wall",
+			"architects_palette:mangrove_boards": "modestmining:mangrove_boards",
+			"architects_palette:mangrove_board_slab": "modestmining:mangrove_board_slab",
+			"architects_palette:mangrove_board_stairs": "modestmining:mangrove_board_stairs",
+			"architects_palette:mangrove_board_wall": "modestmining:mangrove_board_wall",
+			"architects_palette:twisted_boards": "everycomp:mm/upgrade_aquatic/river_boards",
+			"architects_palette:twisted_board_slab": "everycomp:mm/upgrade_aquatic/river_board_slab",
+			"architects_palette:twisted_board_stairs": "everycomp:mm/upgrade_aquatic/river_board_stairs",
+			"architects_palette:twisted_board_wall": "everycomp:mm/upgrade_aquatic/river_board_wall",
+			"everycomp:ap/environmental/wisteria_board_slab": "everycomp:mm/environmental/wisteria_board_slab",
+			"everycomp:ap/environmental/wisteria_board_wall": "everycomp:mm/environmental/wisteria_board_wall",
+			"everycomp:ap/environmental/wisteria_boards": "everycomp:mm/environmental/wisteria_boards",
+			"everycomp:ap/environmental/wisteria_board_stairs": "everycomp:mm/environmental/wisteria_board_stairs",
+			"everycomp:ap/environmental/willow_board_slab": "everycomp:mm/environmental/willow_board_slab",
+			"everycomp:ap/environmental/willow_board_wall": "everycomp:mm/environmental/willow_board_wall",
+			"everycomp:ap/environmental/willow_boards": "everycomp:mm/environmental/willow_boards",
+			"everycomp:ap/environmental/willow_board_stairs": "everycomp:mm/environmental/willow_board_stairs",
+			"everycomp:ap/environmental/cherry_board_slab": "everycomp:mm/environmental/cherry_board_slab",
+			"everycomp:ap/environmental/cherry_board_wall": "everycomp:mm/environmental/cherry_board_wall",
+			"everycomp:ap/environmental/cherry_boards": "everycomp:mm/environmental/cherry_boards",
+			"everycomp:ap/environmental/cherry_board_stairs": "everycomp:mm/environmental/cherry_board_stairs",
+			"everycomp:ap/atmospheric/rosewood_board_slab": "everycomp:mm/atmospheric/rosewood_board_slab",
+			"everycomp:ap/atmospheric/rosewood_board_wall": "everycomp:mm/atmospheric/rosewood_board_wall",
+			"everycomp:ap/atmospheric/rosewood_boards": "everycomp:mm/atmospheric/rosewood_boards",
+			"everycomp:ap/atmospheric/rosewood_board_stairs": "everycomp:mm/atmospheric/rosewood_board_stairs",
+			"everycomp:ap/atmospheric/yucca_board_slab": "everycomp:mm/atmospheric/yucca_board_slab",
+			"everycomp:ap/atmospheric/yucca_board_wall": "everycomp:mm/atmospheric/yucca_board_wall",
+			"everycomp:ap/atmospheric/yucca_boards": "everycomp:mm/atmospheric/yucca_boards",
+			"everycomp:ap/atmospheric/yucca_board_stairs": "everycomp:mm/atmospheric/yucca_board_stairs",
+			"everycomp:ap/atmospheric/morado_board_slab": "everycomp:mm/atmospheric/morado_board_slab",
+			"everycomp:ap/atmospheric/morado_board_wall": "everycomp:mm/atmospheric/morado_board_wall",
+			"everycomp:ap/atmospheric/morado_boards": "everycomp:mm/atmospheric/morado_boards",
+			"everycomp:ap/atmospheric/morado_board_stairs": "everycomp:mm/atmospheric/morado_board_stairs",
+			"everycomp:ap/ecologics/coconut_board_slab": "everycomp:mm/ecologics/coconut_board_slab",
+			"everycomp:ap/ecologics/coconut_board_wall": "everycomp:mm/ecologics/coconut_board_wall",
+			"everycomp:ap/ecologics/coconut_boards": "everycomp:mm/ecologics/coconut_boards",
+			"everycomp:ap/ecologics/coconut_board_stairs": "everycomp:mm/ecologics/coconut_board_stairs",
+			"everycomp:ap/ecologics/azalea_board_slab": "everycomp:mm/ecologics/azalea_board_slab",
+			"everycomp:ap/ecologics/azalea_board_wall": "everycomp:mm/ecologics/azalea_board_wall",
+			"everycomp:ap/ecologics/azalea_boards": "everycomp:mm/ecologics/azalea_boards",
+			"everycomp:ap/ecologics/azalea_board_stairs": "everycomp:mm/ecologics/azalea_board_stairs",
+			"everycomp:ap/autumnity/maple_board_slab": "everycomp:mm/autumnity/maple_board_slab",
+			"everycomp:ap/autumnity/maple_board_wall": "everycomp:mm/autumnity/maple_board_wall",
+			"everycomp:ap/autumnity/maple_boards": "everycomp:mm/autumnity/maple_boards",
+			"everycomp:ap/autumnity/maple_board_stairs": "everycomp:mm/autumnity/maple_board_stairs",
+			"everycomp:ap/upgrade_aquatic/driftwood_board_slab": "everycomp:mm/upgrade_aquatic/driftwood_board_slab",
+			"everycomp:ap/upgrade_aquatic/driftwood_board_wall": "everycomp:mm/upgrade_aquatic/driftwood_board_wall",
+			"everycomp:ap/upgrade_aquatic/driftwood_boards": "everycomp:mm/upgrade_aquatic/driftwood_boards",
+			"everycomp:ap/upgrade_aquatic/driftwood_board_stairs": "everycomp:mm/upgrade_aquatic/driftwood_board_stairs",
+			"everycomp:ap/mynethersdelight/powdery_board_slab": "everycomp:mm/mynethersdelight/powdery_board_slab",
+			"everycomp:ap/mynethersdelight/powdery_board_wall": "everycomp:mm/mynethersdelight/powdery_board_wall",
+			"everycomp:ap/mynethersdelight/powdery_boards": "everycomp:mm/mynethersdelight/powdery_boards",
+			"everycomp:ap/mynethersdelight/powdery_board_stairs": "everycomp:mm/mynethersdelight/powdery_board_stairs",
+			"everycomp:ap/quark/bamboo_board_slab": "everycomp:mm/quark/bamboo_board_slab",
+			"everycomp:ap/quark/bamboo_board_wall": "everycomp:mm/quark/bamboo_board_wall",
+			"everycomp:ap/quark/bamboo_boards": "everycomp:mm/quark/bamboo_boards",
+			"everycomp:ap/quark/bamboo_board_stairs": "everycomp:mm/quark/bamboo_board_stairs"
+	   	}
+}

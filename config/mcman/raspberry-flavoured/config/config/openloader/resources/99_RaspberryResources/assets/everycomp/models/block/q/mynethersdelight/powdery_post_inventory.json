@@ -1,0 +1,7 @@
+{
+  "parent": "quark:block/template/custom_post_inventory",
+  "textures": {
+    "particle": "mynethersdelight:block/powdery_block",
+    "texture": "everycomp:block/q/mynethersdelight/powdery_post"
+  }
+}

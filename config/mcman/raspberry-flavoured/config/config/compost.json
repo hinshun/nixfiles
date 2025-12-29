@@ -1,0 +1,59 @@
+{
+  "compositions": {
+    "vanilla": {
+      "compost": {
+        "item": "minecraft:bone_meal",
+        "chance": 1.0,
+        "count": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "worlds": []
+    },
+    "extra1": {
+      "compost": {
+        "item": "minecraft:bone_meal",
+        "chance": 0.4,
+        "count": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      "worlds": []
+    },
+    "extra2": {
+      "compost": {
+        "item": "minecraft:bone_meal",
+        "chance": 0.2,
+        "count": {
+          "min": 1,
+          "max": 3
+        }
+      },
+      "worlds": []
+    },
+    "worm": {
+      "compost": {
+        "item": "aquaculture:worm",
+        "chance": 0.65,
+        "count": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "worlds": []
+    },
+    "organic_compost": {
+      "compost": {
+        "item": "farmersdelight:organic_compost",
+        "chance": 0.1,
+        "count": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "worlds": []
+    }
+  }
+}
